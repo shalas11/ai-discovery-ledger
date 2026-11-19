@@ -122,6 +122,7 @@ function page({ title, description, path, type = "website", body, head = "", scr
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="${BASE}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${BASE}icon-512.png">
 <link rel="alternate" type="application/rss+xml" title="${esc(config.name)}" href="${BASE}feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
