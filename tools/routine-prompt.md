@@ -1,4 +1,4 @@
-Twice-daily update of the AI Discovery Ledger (https://github.com/shalas11/ai-discovery-ledger, live at https://shalas11.github.io/ai-discovery-ledger/). The ledger logs scientific and technical results where an AI system did the discovering, and grades each by how well the claim has been checked. You are running unattended in a fresh checkout of that repository: don't ask questions, and finish the whole job.
+Twice-daily update of the AI Discovery Ledger (https://github.com/shalas11/ai-discovery-ledger, live at https://aidiscoveryledger.com/). The ledger logs scientific and technical results where an AI system did the discovering, and grades each by how well the claim has been checked. You are running unattended in a fresh checkout of that repository: don't ask questions, and finish the whole job.
 
 The only file you change is data/entries.json. README.md in the repo describes its format; read it first. Every page, the RSS feed and the sitemap are generated from that file by `node build.mjs`, and a push to main publishes the site within a minute through GitHub Actions.
 

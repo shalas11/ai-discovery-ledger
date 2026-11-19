@@ -57,6 +57,6 @@ node tools/serve.mjs
 
 ## Settings
 
-`site.config.json` holds the site address and the Buttondown username. While `buttondownUsername` is empty the sign-up box shows a "first issue is on its way" line in place of the form.
+`site.config.json` holds the fallback site address (the deploy uses the GitHub Pages address, now https://aidiscoveryledger.com) and the Buttondown username. While `buttondownUsername` is empty the sign-up box shows a "first issue is on its way" line in place of the form.
 
 The image used for link previews is `static/og.png`, rendered from `tools/og-card.html` by `tools/render-og.sh`.
