@@ -6,18 +6,17 @@
   filters.hidden = false;
 
   var entries = Array.prototype.map.call(feed.querySelectorAll(".entry"), function (el) {
-    return { el: el, field: el.dataset.field, grade: el.dataset.grade, hay: el.textContent.toLowerCase() };
+    return { el: el, field: el.dataset.field, hay: el.textContent.toLowerCase() };
   });
   var days = feed.querySelectorAll(".day");
   var empty = document.getElementById("empty");
   var chips = filters.querySelectorAll(".chip");
-  var state = { field: "All", grade: "all", q: "" };
+  var state = { field: "All", q: "" };
 
   function apply() {
     var shown = 0;
     entries.forEach(function (e) {
       var ok = (state.field === "All" || e.field === state.field) &&
-        (state.grade === "all" || e.grade === state.grade) &&
         (!state.q || e.hay.indexOf(state.q) !== -1);
       e.el.hidden = !ok;
       if (ok) shown++;
@@ -38,5 +37,4 @@
     });
   });
   document.getElementById("q").addEventListener("input", function (ev) { state.q = ev.target.value.trim().toLowerCase(); apply(); });
-  document.getElementById("grade").addEventListener("change", function (ev) { state.grade = ev.target.value; apply(); });
 })();

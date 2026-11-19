@@ -1,12 +1,12 @@
 # AI Discovery Ledger
 
-A running record of scientific and technical results where an AI system did the discovering. Every entry carries a grade for how well the claim has been checked.
+News of scientific and technical discoveries made by AI systems, logged daily with sources and what is still unverified.
 
 The site is plain static files built from one data file. There are no dependencies beyond Node 20 or newer.
 
 ## Updating the ledger
 
-Everything on the site comes from `data/entries.json`. Edit that file and push to `main`; the workflow in `.github/workflows/pages.yml` rebuilds and publishes the site. If the file has a mistake (a missing field, a duplicate id, an unknown grade) the build fails and the live site stays as it was.
+Everything on the site comes from `data/entries.json`. Edit that file and push to `main`; the workflow in `.github/workflows/pages.yml` rebuilds and publishes the site. If the file has a mistake (a missing field, a duplicate id, a bad date) the build fails and the live site stays as it was.
 
 ```json
 {
@@ -17,14 +17,12 @@ Everything on the site comes from `data/entries.json`. Edit that file and push t
       "date": "2026-11-06",
       "logged": "2026-11-17",
       "field": "Computer science",
-      "grade": "machine",
       "title": "…",
       "who": "…",
       "system": "…",
       "sum": "…",
       "open": "…",
-      "src": [{ "label": "PSI", "url": "https://…" }],
-      "history": [{ "date": "2026-11-17", "from": "announced", "to": "machine", "note": "…" }]
+      "src": [{ "label": "PSI", "url": "https://…" }]
     }
   ]
 }
@@ -36,10 +34,8 @@ Everything on the site comes from `data/entries.json`. Edit that file and push t
 | `id` | Permanent. It is the entry's address (`/entry/<id>/`), so never change it once published. Lowercase letters, digits and hyphens. |
 | `date` | When the result was announced or published. |
 | `logged` | When the entry was added here. Optional; used for the feed order. |
-| `grade` | `announced`, `machine`, `peer`, `confirmed` or `contested`. |
-| `open` | What is still unresolved. May be an empty string. |
+| `open` | What is still unverified or limited. May be an empty string. Rewritten when follow-up news arrives. |
 | `src` | At least one source with a label and a link. |
-| `history` | Optional. Add one item each time the grade changes; the entry page and the RSS feed both show it. |
 
 New entries go at the top of the list.
 

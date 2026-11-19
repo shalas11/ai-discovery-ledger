@@ -6,7 +6,6 @@
       "date": "2026-11-15",
       "logged": "2026-11-18",
       "field": "Physics",
-      "grade": "machine",
       "title": "GPT-6 Astra credited with the proof behind a candidate lattice definition of the Standard Model",
       "who": "Nathaniel Craig (UC Santa Barbara, visiting scientist at OpenAI)",
       "system": "GPT-6 Astra",
@@ -32,7 +31,6 @@
       "date": "2026-11-13",
       "logged": "2026-11-18",
       "field": "Mathematics",
-      "grade": "machine",
       "title": "Gemini agents help prove the Courtade–Kumar conjecture, with a batch of new algorithm results",
       "who": "Google Research with CUHK and other academic co-authors",
       "system": "Antigravity /teamwork agents on Gemini 4 models",
@@ -58,7 +56,6 @@
       "date": "2026-11-06",
       "logged": "2026-11-17",
       "field": "Computer science",
-      "grade": "machine",
       "title": "AI system proves the Aaronson–Ambainis conjecture on the limits of quantum speedups",
       "who": "Physical Superintelligence (PSI)",
       "system": "PSI research system running a non-public Anthropic model",
@@ -83,7 +80,6 @@
       "id": "2026-11-14-ecg-sudden-cardiac-death",
       "date": "2026-11-14",
       "field": "Medicine",
-      "grade": "peer",
       "title": "Deep learning finds an ECG signal that flags sudden cardiac death risk",
       "who": "UC Berkeley and collaborators · Nature",
       "system": "Deep-learning model trained on 440,000+ ECGs",
@@ -100,7 +96,6 @@
       "id": "2026-11-11-alphagenome-2",
       "date": "2026-11-11",
       "field": "Biology",
-      "grade": "announced",
       "title": "AlphaGenome 2 predicts what a DNA variant does in one chosen cell type",
       "who": "Google DeepMind",
       "system": "AlphaGenome 2",
@@ -117,7 +112,6 @@
       "id": "2026-11-10-alphaproof-code-signal",
       "date": "2026-11-10",
       "field": "Computer science",
-      "grade": "machine",
       "title": "AI agents formally verify the code behind Signal's encryption",
       "who": "Google DeepMind",
       "system": "AlphaProof Code, agents on Gemini 4 Carbon",
@@ -138,7 +132,6 @@
       "id": "2026-11-06-rsa-1024-weaknesses",
       "date": "2026-11-06",
       "field": "Computer science",
-      "grade": "announced",
       "title": "AI agents find two new weaknesses in retired RSA-1024 encryption",
       "who": "Google DeepMind with UC San Diego and Inria",
       "system": "Supervised AI research agents",
@@ -155,7 +148,6 @@
       "id": "2026-11-02-pinal-text-to-protein",
       "date": "2026-11-02",
       "field": "Biology",
-      "grade": "peer",
       "title": "Proteins designed from plain-language descriptions work in the lab",
       "who": "Westlake University · Nature",
       "system": "Pinal",
@@ -172,7 +164,6 @@
       "id": "2026-10-27-lama2-antibody",
       "date": "2026-10-27",
       "field": "Medicine",
-      "grade": "announced",
       "title": "AI-designed antibody roughly doubles grip strength in mice with a muscular dystrophy",
       "who": "Anthropic and Mithril Medicine",
       "system": "Claude, per Anthropic",
@@ -189,7 +180,6 @@
       "id": "2026-10-26-eth-disproof",
       "date": "2026-10-26",
       "field": "Computer science",
-      "grade": "machine",
       "title": "OpenAI model claims the Exponential Time Hypothesis is false",
       "who": "OpenAI",
       "system": "Internal reasoning model",
@@ -210,7 +200,6 @@
       "id": "2026-10-26-local-smoothing-kakeya",
       "date": "2026-10-26",
       "field": "Mathematics",
-      "grade": "machine",
       "title": "OpenAI model claims a proof of local smoothing in every dimension",
       "who": "OpenAI",
       "system": "Internal reasoning model",
@@ -231,7 +220,6 @@
       "id": "2026-10-26-yang-mills-qcd",
       "date": "2026-10-26",
       "field": "Physics",
-      "grade": "machine",
       "title": "OpenAI reports a quantum chromodynamics result with a formalized Yang–Mills existence proof",
       "who": "OpenAI, with a physics group led by David Gross",
       "system": "Internal reasoning model",
@@ -254,21 +242,12 @@
           "label": "CASRAI",
           "url": "https://casrai.org/news/ai-rivals-physics-mathematical-challenge-2026"
         }
-      ],
-      "history": [
-        {
-          "date": "2026-11-17",
-          "from": "announced",
-          "to": "machine",
-          "note": "A five-physicist group chosen by OpenAI and chaired by David Gross reported that the Lean code rebuilds cleanly and matches the standard statement of Yang–Mills existence."
-        }
       ]
     },
     {
       "id": "2026-10-06-openai-722-manuscripts",
       "date": "2026-10-06",
       "field": "Mathematics",
-      "grade": "contested",
       "title": "OpenAI releases 722 AI-written manuscripts claiming hundreds of open problems",
       "who": "OpenAI",
       "system": "Internal frontier model",
@@ -285,7 +264,6 @@
       "id": "2026-09-08-navier-stokes",
       "date": "2026-09-08",
       "field": "Mathematics",
-      "grade": "contested",
       "title": "OpenAI claims a solution to the Navier–Stokes Millennium Prize problem",
       "who": "OpenAI",
       "system": "Multi-agent system of roughly ten thousand agents",
@@ -308,21 +286,12 @@
           "label": "TechCrunch",
           "url": "https://techcrunch.com/2026/10/08/openais-math-solutions-arent-meeting-the-fields-standards-yet/"
         }
-      ],
-      "history": [
-        {
-          "date": "2026-11-17",
-          "from": "announced",
-          "to": "contested",
-          "note": "A paper by Bastounis, Circelli and Hansen (arXiv 2610.08144) argues that the Lean code does not correspond to the written proof."
-        }
       ]
     },
     {
       "id": "2026-08-06-ai-designed-phage-genomes",
       "date": "2026-08-06",
       "field": "Biology",
-      "grade": "peer",
       "title": "First working viruses built from AI-generated whole genomes",
       "who": "Arc Institute and Stanford · Science",
       "system": "Evo 1 and Evo 2 genome language models",
@@ -343,7 +312,6 @@
       "id": "2026-05-20-unit-distance",
       "date": "2026-05-20",
       "field": "Mathematics",
-      "grade": "confirmed",
       "title": "OpenAI model disproves an 80-year-old conjecture on the unit distance problem",
       "who": "OpenAI",
       "system": "General-purpose reasoning model",

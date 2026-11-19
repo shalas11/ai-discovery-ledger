@@ -1,7 +1,7 @@
 {
   "siteUrl": "https://aidiscoveryledger.com",
   "name": "AI Discovery Ledger",
-  "description": "A running record of scientific and technical results where an AI system did the discovering, each graded by how well the claim has been checked.",
+  "description": "News of scientific and technical discoveries made by AI systems, logged daily with sources and what is still unverified.",
   "newsletterName": "AI Discovery Ledger Weekly",
   "buttondownUsername": "aidiscoveryledger"
 }
