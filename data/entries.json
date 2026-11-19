@@ -1,0 +1,364 @@
+{
+  "checked": "2026-11-18",
+  "entries": [
+    {
+      "id": "2026-11-15-lattice-standard-model",
+      "date": "2026-11-15",
+      "logged": "2026-11-18",
+      "field": "Physics",
+      "grade": "machine",
+      "title": "GPT-6 Astra credited with the proof behind a candidate lattice definition of the Standard Model",
+      "who": "Nathaniel Craig (UC Santa Barbara, visiting scientist at OpenAI)",
+      "system": "GPT-6 Astra",
+      "sum": "Putting the Standard Model on a spacetime grid has been stuck for decades because the weak force treats left- and right-handed particles differently, and Lüscher's fix for simpler theories had not been carried over to the full model in more than 25 years. Craig says he had a strategy but could not prove it in every case, and that Astra turned it into a construction and led the detailed proof. The preprint, posted October 6, builds a gauge-invariant fermion measure on four-dimensional lattices for a class of theories that includes the Standard Model, and comes with a Lean 4 formalization.",
+      "open": "The model's role rests on Craig's own account, published on OpenAI's science blog. Three lattice theorists read the work privately, but no outside assessment has been published. Reflection positivity and a link to a continuum theory are not established, and Craig calls it an answer in principle more than in practice.",
+      "src": [
+        {
+          "label": "arXiv 2610.09093",
+          "url": "https://arxiv.org/abs/2610.09093"
+        },
+        {
+          "label": "AI Weekly",
+          "url": "https://aiweekly.co/alerts/openai-says-gpt-6-astra-led-proof-for-lattice-standard-model"
+        },
+        {
+          "label": "Superpower Daily",
+          "url": "https://superpowerdaily.com/posts/physicist-credits-gpt-6-astra-with-leading-proof-work-on-standard-model-proposal"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-courtade-kumar",
+      "date": "2026-11-13",
+      "logged": "2026-11-18",
+      "field": "Mathematics",
+      "grade": "machine",
+      "title": "Gemini agents help prove the Courtade–Kumar conjecture, with a batch of new algorithm results",
+      "who": "Google Research with CUHK and other academic co-authors",
+      "system": "Antigravity /teamwork agents on Gemini 4 models",
+      "sum": "The 2013 conjecture says no one-bit summary of a noisy signal carries more information than simply reading off a single input bit. Google says Gemini found counterexamples to a broader version, worked out most of the analytical bounds and interval-arithmetic certificates, and extended the proof from balanced to unbalanced functions without human input; the whole proof is formalized in about 50 million lines of Lean 4. The same post lists about ten further new results, including a deterministic Boolean matrix multiplication algorithm that answers an open question from STOC 2024 and the first n-bit functions needing more than n/2 quantum queries.",
+      "open": "Google and its co-authors are the only source, and nothing here has been peer reviewed or independently reproduced. People supplied key steps: the CUHK team proposed the function that cut the problem to a 14-variable optimization and gave one analytical bound. Google gives no count of problems attempted or failed.",
+      "src": [
+        {
+          "label": "Google Research",
+          "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/"
+        },
+        {
+          "label": "arXiv 2609.24931",
+          "url": "https://arxiv.org/abs/2609.24931"
+        },
+        {
+          "label": "Interesting Engineering",
+          "url": "https://interestingengineering.com/ai-robotics/google-antigravity-multi-agent-research"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-06-aaronson-ambainis",
+      "date": "2026-11-06",
+      "logged": "2026-11-17",
+      "field": "Computer science",
+      "grade": "machine",
+      "title": "AI system proves the Aaronson–Ambainis conjecture on the limits of quantum speedups",
+      "who": "Physical Superintelligence (PSI)",
+      "system": "PSI research system running a non-public Anthropic model",
+      "sum": "The conjecture, open since 2008, says every bounded low-degree polynomial has at least one input bit with sizeable influence. PSI's system had a full proof by day three of its run and then tightened the bound twice, ending at an influence of at least about 0.0025·v^(5/2)/d^6 for variance v and degree d, where earlier bounds shrank exponentially with the degree. It follows that a quantum algorithm cannot save exponentially many input reads on typical random inputs to a yes/no problem.",
+      "open": "Lean accepts the main theorem, but the paper sits on GitHub without peer review. The only outside readers so far are a Stanford group whose comments are known through PSI, and the model is not public. The result limits input reads, not total running time.",
+      "src": [
+        {
+          "label": "PSI",
+          "url": "https://psi.inc/research/aaronson-ambainis/"
+        },
+        {
+          "label": "The Quantum Insider",
+          "url": "https://thequantuminsider.com/2026/11/06/ai-assisted-proof-settles-longstanding-question-about-quantum-speedups/"
+        },
+        {
+          "label": "Big Think",
+          "url": "https://bigthink.com/starts-with-a-bang/ai-proved-quantum-complexity-conjecture/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14-ecg-sudden-cardiac-death",
+      "date": "2026-11-14",
+      "field": "Medicine",
+      "grade": "peer",
+      "title": "Deep learning finds an ECG signal that flags sudden cardiac death risk",
+      "who": "UC Berkeley and collaborators · Nature",
+      "system": "Deep-learning model trained on 440,000+ ECGs",
+      "sum": "A model trained on Swedish heart tracings linked to death records picked out a pattern in ordinary ECGs that marks people at high risk of sudden cardiac death. The group it flagged died suddenly at about 7% a year, against 4.6% for the group picked by the standard pumping-strength test, and the pattern held in patient records from the US and Taiwan.",
+      "open": "Nobody yet knows what the signal is biologically, and it is not in clinical use.",
+      "src": [
+        {
+          "label": "ScienceDaily",
+          "url": "https://www.sciencedaily.com/releases/2026/11/261112230456.htm"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-11-alphagenome-2",
+      "date": "2026-11-11",
+      "field": "Biology",
+      "grade": "announced",
+      "title": "AlphaGenome 2 predicts what a DNA variant does in one chosen cell type",
+      "who": "Google DeepMind",
+      "system": "AlphaGenome 2",
+      "sum": "The model takes a stretch of DNA plus a tissue or cell state and predicts gene activity there. It recovered a known inflammatory bowel disease mechanism in gut macrophages and predicted that a variant tied to severe COVID-19 disrupts gene activity most in activated T cells.",
+      "open": "The findings are computational predictions that still need lab confirmation, and the announcement names no journal.",
+      "src": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-alphaproof-code-signal",
+      "date": "2026-11-10",
+      "field": "Computer science",
+      "grade": "machine",
+      "title": "AI agents formally verify the code behind Signal's encryption",
+      "who": "Google DeepMind",
+      "system": "AlphaProof Code, agents on Gemini 4 Carbon",
+      "sum": "In about four weeks, agents wrote millions of lines of machine-checked Lean proof showing that the compiled Signal protocol code keeps its core security promises. When researchers put two old, already-fixed bugs back into a copy of the code, the system proved each buggy version insecure.",
+      "open": "A proof is only as good as its specification. Those were written and reviewed by people but have not had an outside audit, and no previously unknown bugs were reported.",
+      "src": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+        },
+        {
+          "label": "Axios",
+          "url": "https://www.axios.com/2026/11/10/google-code-verification-signal"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-06-rsa-1024-weaknesses",
+      "date": "2026-11-06",
+      "field": "Computer science",
+      "grade": "announced",
+      "title": "AI agents find two new weaknesses in retired RSA-1024 encryption",
+      "who": "Google DeepMind with UC San Diego and Inria",
+      "system": "Supervised AI research agents",
+      "sum": "The agents found a signature-forgery shortcut that is up to 1,600 times faster on paper when an attacker controls only a small part of the signed data, and a batch method that cuts the cost of factoring each additional key about 30-fold.",
+      "open": "Both headline figures are theoretical or asymptotic, not measured attacks. Keys of 2048 bits and larger are unaffected.",
+      "src": [
+        {
+          "label": "Interesting Engineering",
+          "url": "https://interestingengineering.com/ai-robotics/google-deepmind-agents-expose-older-encryption-flaws"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-02-pinal-text-to-protein",
+      "date": "2026-11-02",
+      "field": "Biology",
+      "grade": "peer",
+      "title": "Proteins designed from plain-language descriptions work in the lab",
+      "who": "Westlake University · Nature",
+      "system": "Pinal",
+      "sum": "Pinal turns a written description of a desired function into protein sequences. It produced working proteins on all four test tasks, a plastic-degrading enzyme among them, and one design lifted a carbon-fixation pathway to 1.7 times its natural output.",
+      "open": "Hit rates were uneven. One task yielded a single working protein from 29 tested.",
+      "src": [
+        {
+          "label": "SingularityHub",
+          "url": "https://singularityhub.com/2026/11/02/scientists-can-now-ask-ai-to-design-proteins-using-plain-language/"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27-lama2-antibody",
+      "date": "2026-10-27",
+      "field": "Medicine",
+      "grade": "announced",
+      "title": "AI-designed antibody roughly doubles grip strength in mice with a muscular dystrophy",
+      "who": "Anthropic and Mithril Medicine",
+      "system": "Claude, per Anthropic",
+      "sum": "Anthropic reported a preclinical antibody for LAMA2-related muscular dystrophy that went from idea to mouse data in under 18 months. One design about doubled grip strength compared with untreated mice.",
+      "open": "This comes from a company technical report that has not been peer reviewed. Human trials are not expected before late 2028.",
+      "src": [
+        {
+          "label": "The Next Web",
+          "url": "https://thenextweb.com/news/anthropic-mithril-acquisition-claude-drug-development"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-26-eth-disproof",
+      "date": "2026-10-26",
+      "field": "Computer science",
+      "grade": "machine",
+      "title": "OpenAI model claims the Exponential Time Hypothesis is false",
+      "who": "OpenAI",
+      "system": "Internal reasoning model",
+      "sum": "The hypothesis says 3-SAT cannot be solved in sub-exponential time, and a large part of complexity theory is built on it. OpenAI says its model wrote a disproof on October 16 that was checked in Lean the next day. The paper and the formal proof are public.",
+      "open": "Outside experts are still working out whether the formal statement matches the claim and what the algorithm means in practice.",
+      "src": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+        },
+        {
+          "label": "Tech Insider",
+          "url": "https://tech-insider.org/openai-three-science-discoveries-eth-kakeya-qcd-2026/"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-26-local-smoothing-kakeya",
+      "date": "2026-10-26",
+      "field": "Mathematics",
+      "grade": "machine",
+      "title": "OpenAI model claims a proof of local smoothing in every dimension",
+      "who": "OpenAI",
+      "system": "Internal reasoning model",
+      "sum": "The local smoothing conjecture for the wave equation implies the Kakeya and restriction conjectures in harmonic analysis. OpenAI says its model proved it for all dimensions from two up on October 18, formalized it in Lean a day later, and published both on an expert's advice.",
+      "open": "Analysts have not yet confirmed the argument by hand.",
+      "src": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+        },
+        {
+          "label": "Progressive Robot",
+          "url": "https://www.progressiverobot.com/2026/10/27/openai-discoveries-mathematics-computer-science-physics/"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-26-yang-mills-qcd",
+      "date": "2026-10-26",
+      "field": "Physics",
+      "grade": "machine",
+      "title": "OpenAI reports a quantum chromodynamics result with a formalized Yang–Mills existence proof",
+      "who": "OpenAI, with a physics group led by David Gross",
+      "system": "Internal reasoning model",
+      "sum": "The third of three results announced together. OpenAI says the Yang–Mills existence part was formalized in Lean on October 16 and handed to a group of physicists for review.",
+      "open": "On November 9–10 the five-physicist group, which OpenAI chose, reported that the Lean code rebuilds cleanly and that its definitions match the standard statement of four-dimensional Yang–Mills existence, while saying it does not yet fully understand the proof. No fully independent check is on record, the 1,147-page written proof is still private, and the mass gap, the other half of the Millennium problem, is untouched. Critics including Peter Woit question whether the verified statement meets the prize problem's standard.",
+      "src": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+        },
+        {
+          "label": "Progressive Robot",
+          "url": "https://www.progressiverobot.com/2026/10/27/openai-discoveries-mathematics-computer-science-physics/"
+        },
+        {
+          "label": "Dataconomy",
+          "url": "https://dataconomy.com/2026/11/12/nobel-panel-validates-openais-yang-mills-existence-proof/"
+        },
+        {
+          "label": "CASRAI",
+          "url": "https://casrai.org/news/ai-rivals-physics-mathematical-challenge-2026"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-17",
+          "from": "announced",
+          "to": "machine",
+          "note": "A five-physicist group chosen by OpenAI and chaired by David Gross reported that the Lean code rebuilds cleanly and matches the standard statement of Yang–Mills existence."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-06-openai-722-manuscripts",
+      "date": "2026-10-06",
+      "field": "Mathematics",
+      "grade": "contested",
+      "title": "OpenAI releases 722 AI-written manuscripts claiming hundreds of open problems",
+      "who": "OpenAI",
+      "system": "Internal frontier model",
+      "sum": "Posted to GitHub across 372 topics, the claims include a matrix multiplication exponent of 9/4, a proof of the unique games conjecture and a wide zero-free region for the Riemann zeta function. About half the manuscripts come with Lean proofs.",
+      "open": "Three papers were retracted and 14 revised within two days. Some formal proofs appear to establish less than the papers claim, and full review is expected to take months.",
+      "src": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/OpenAI_bulk_release_of_mathematical_papers"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-08-navier-stokes",
+      "date": "2026-09-08",
+      "field": "Mathematics",
+      "grade": "contested",
+      "title": "OpenAI claims a solution to the Navier–Stokes Millennium Prize problem",
+      "who": "OpenAI",
+      "system": "Multi-agent system of roughly ten thousand agents",
+      "sum": "The company said its system settled existence and smoothness for the fluid equations with a smooth external force, one of the seven Millennium Prize problems.",
+      "open": "No complete independent check has been published. A paper by Bastounis, Circelli and Hansen argues that the Lean code does not correspond to the written blow-up proof, citing at least two discrepancies; that does not by itself show the proof is wrong, and no OpenAI fix is on record. Credit is also disputed: mathematician Tristan Buckmaster says unpublished results of his reached OpenAI days earlier.",
+      "src": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/OpenAI_bulk_release_of_mathematical_papers"
+        },
+        {
+          "label": "arXiv 2609.20408",
+          "url": "https://arxiv.org/pdf/2609.20408"
+        },
+        {
+          "label": "arXiv 2610.08144",
+          "url": "https://arxiv.org/abs/2610.08144"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/08/openais-math-solutions-arent-meeting-the-fields-standards-yet/"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-17",
+          "from": "announced",
+          "to": "contested",
+          "note": "A paper by Bastounis, Circelli and Hansen (arXiv 2610.08144) argues that the Lean code does not correspond to the written proof."
+        }
+      ]
+    },
+    {
+      "id": "2026-08-06-ai-designed-phage-genomes",
+      "date": "2026-08-06",
+      "field": "Biology",
+      "grade": "peer",
+      "title": "First working viruses built from AI-generated whole genomes",
+      "who": "Arc Institute and Stanford · Science",
+      "system": "Evo 1 and Evo 2 genome language models",
+      "sum": "The models wrote complete bacteriophage genomes modeled on ΦX174. Of nearly 300 that were synthesized, 16 produced viable phages, and a mixture of them overcame E. coli strains that resist the natural virus.",
+      "open": "The hit rate was about 5% on one of the smallest genomes known. Larger genomes are still out of reach.",
+      "src": [
+        {
+          "label": "Science",
+          "url": "https://doi.org/10.1126/science.aec2657"
+        },
+        {
+          "label": "Lab Manager",
+          "url": "https://www.labmanager.com/ai-designed-phages-kill-e-coli-and-overcome-phage-resistance-35800"
+        }
+      ]
+    },
+    {
+      "id": "2026-05-20-unit-distance",
+      "date": "2026-05-20",
+      "field": "Mathematics",
+      "grade": "confirmed",
+      "title": "OpenAI model disproves an 80-year-old conjecture on the unit distance problem",
+      "who": "OpenAI",
+      "system": "General-purpose reasoning model",
+      "sum": "Using algebraic number theory, the model found ways to arrange points with more pairs exactly one unit apart than the grid-like layouts long believed to be best. Outside mathematicians checked and analyzed the argument.",
+      "open": "",
+      "src": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/"
+        },
+        {
+          "label": "BGR",
+          "url": "https://www.bgr.com/2294343/ai-breakthrough-solves-80-year-old-math-problem/"
+        }
+      ]
+    }
+  ]
+}

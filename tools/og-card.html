@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Source for static/og.png, the 1200x630 image shown when a link is shared. Re-render with tools/render-og.sh. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=IBM+Plex+Mono:wght@500;600&family=Source+Serif+4:opsz,wght@8..60,400&display=block" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { background: #edf0ee; color: #0f1e28; padding: 62px 76px 0; position: relative; font-family: "Source Serif 4", Georgia, serif; }
+  .kicker { font: 600 22px "IBM Plex Mono", monospace; letter-spacing: .1em; text-transform: uppercase; color: #54646e; }
+  h1 { font: 800 148px/0.9 "Bricolage Grotesque", sans-serif; letter-spacing: -.04em; margin: 26px 0 30px; }
+  h1 span { color: #2a3fd4; }
+  p { font-size: 35px; line-height: 1.32; margin: 0; max-width: 23em; }
+  .grades { position: absolute; left: 76px; right: 76px; bottom: 50px; padding-top: 24px; border-top: 3px solid #0f1e28; display: flex; justify-content: space-between; align-items: flex-end; font: 600 21px "IBM Plex Mono", monospace; }
+  .g { display: flex; align-items: flex-end; gap: 12px; color: var(--c); }
+  .bars { display: flex; align-items: flex-end; gap: 4px; height: 30px; }
+  .bars i { width: 8px; border: 2px solid var(--c); border-radius: 2px; }
+  .bars i:nth-child(1) { height: 11px; } .bars i:nth-child(2) { height: 17px; } .bars i:nth-child(3) { height: 24px; } .bars i:nth-child(4) { height: 30px; }
+  .bars i.on { background: var(--c); }
+</style>
+</head>
+<body>
+  <div class="kicker">Logged daily</div>
+  <h1>AI Discovery <span>Ledger</span></h1>
+  <p>Discoveries made by AI systems, each graded by how well the claim has been checked.</p>
+  <div class="grades">
+    <span class="g" style="--c:#a86200"><span class="bars"><i class="on"></i><i></i><i></i><i></i></span>Announced</span>
+    <span class="g" style="--c:#6146c9"><span class="bars"><i class="on"></i><i class="on"></i><i></i><i></i></span>Machine-checked</span>
+    <span class="g" style="--c:#0a7a81"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>Peer-reviewed</span>
+    <span class="g" style="--c:#1b7f45"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Confirmed</span>
+    <span class="g" style="--c:#bf2f27"><span class="bars"><i></i><i></i><i></i><i></i></span>Contested</span>
+  </div>
+</body>
+</html>
