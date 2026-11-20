@@ -1,6 +1,56 @@
 {
-  "checked": "2026-11-18",
+  "checked": "2026-11-20",
   "entries": [
+    {
+      "id": "2026-11-20-riemann-hypothesis-claude-lean",
+      "date": "2026-11-20",
+      "logged": "2026-11-20",
+      "field": "Mathematics",
+      "title": "Mathematician says he and Claude have proved the Riemann hypothesis, and posts only Lean code",
+      "who": "Levent Alpöge",
+      "system": "Claude",
+      "sum": "In a four-page note posted on November 20, Levent Alpöge says that, working with Claude, he found a proof of the Riemann hypothesis, the 1859 conjecture about how prime numbers are spread out, and that the method also settles the Generalized Riemann Hypothesis. He has released only a Lean formalization, split into 14 archive files, because he says a written version runs past 250,000 pages. He credits Claude with key steps near the end, including the idea of chaining theta lifts about the square root of X times.",
+      "open": "No outside mathematician has checked it and there is no written paper. Alpöge says he does not yet understand much of the argument himself. One report says the main theorem statements compile in Lean, but nobody has yet confirmed that the Lean definitions state the standard hypothesis.",
+      "src": [
+        {
+          "label": "Alpöge's note (PDF)",
+          "url": "https://alpo.ge/remark.pdf"
+        },
+        {
+          "label": "Futurism",
+          "url": "https://futurism.com/artificial-intelligence/anthropic-riemann-hypothesis"
+        },
+        {
+          "label": "Interesting Engineering",
+          "url": "https://interestingengineering.com/ai-robotics/anthropic-167-year-old-riemann-hypothesis-claude"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-17-black-hole-physics-claude",
+      "date": "2026-11-17",
+      "logged": "2026-11-20",
+      "field": "Physics",
+      "title": "Claude agents settle two open problems in black hole physics",
+      "who": "Anthropic (project set up by researcher Hongbin Chen)",
+      "system": "Teams of Claude Fable 5.2 agents",
+      "sum": "Anthropic says Claude agents finished a calculation set up in 2003 but never completed, showing that a transition in a simplified model universe is abrupt, as Hawking and Page predicted for black holes. A second result raises a long-standing bound in the modular bootstrap from about 8.5 to about 9.13, which Anthropic says is the best possible. Independent agents redid nearly every step, a physicist checked the main results, and Anthropic says the bootstrap result was verified in Lean.",
+      "open": "Anthropic is the main source. Both preprints are unreviewed, list no human authors and are labelled primarily AI-generated. Anthropic says neither result describes our universe or has practical use.",
+      "src": [
+        {
+          "label": "Anthropic",
+          "url": "https://anthropic.com/research/claude-black-hole-physics"
+        },
+        {
+          "label": "Preprint: modular bootstrap",
+          "url": "https://hexagonmath.org/2611.00174v1"
+        },
+        {
+          "label": "Preprint: Hawking-Page",
+          "url": "https://hexagonmath.org/2611.00175v1"
+        }
+      ]
+    },
     {
       "id": "2026-11-15-lattice-standard-model",
       "date": "2026-11-15",
@@ -60,7 +110,7 @@
       "who": "Physical Superintelligence (PSI)",
       "system": "PSI research system running a non-public Anthropic model",
       "sum": "The conjecture, open since 2008, says every bounded low-degree polynomial has at least one input bit with sizeable influence. PSI's system had a full proof by day three of its run and then tightened the bound twice, ending at an influence of at least about 0.0025·v^(5/2)/d^6 for variance v and degree d, where earlier bounds shrank exponentially with the degree. It follows that a quantum algorithm cannot save exponentially many input reads on typical random inputs to a yes/no problem.",
-      "open": "Lean accepts the main theorem, but the paper sits on GitHub without peer review. The only outside readers so far are a Stanford group whose comments are known through PSI, and the model is not public. The result limits input reads, not total running time.",
+      "open": "Not peer reviewed, and the model is not public. David Turturean posted the proof on arXiv on November 6, and four computer scientists led by Guy Blanc posted a reworked exposition on November 8; they say they worked to understand it, which is not a formal independent check. The result limits input reads, not total running time.",
       "src": [
         {
           "label": "PSI",
@@ -73,6 +123,14 @@
         {
           "label": "Big Think",
           "url": "https://bigthink.com/starts-with-a-bang/ai-proved-quantum-complexity-conjecture/"
+        },
+        {
+          "label": "arXiv 2611.09773",
+          "url": "https://arxiv.org/abs/2611.09773"
+        },
+        {
+          "label": "arXiv 2611.11626 (exposition)",
+          "url": "https://arxiv.org/abs/2611.11626"
         }
       ]
     },
