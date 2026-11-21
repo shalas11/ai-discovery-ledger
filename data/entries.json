@@ -66,7 +66,17 @@
           "label": "Scientific American",
           "url": "https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/"
         }
-      ]
+      ],
+      "image": {
+        "file": "2026-11-20-riemann-hypothesis-claude-lean.jpg",
+        "width": 903,
+        "height": 986,
+        "alt": "Engraved portrait of Bernhard Riemann, bearded and wearing glasses",
+        "caption": "Bernhard Riemann, who posed the hypothesis in 1859, in an engraving from 1863.",
+        "credit": "Wikimedia Commons",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Georg_Friedrich_Bernhard_Riemann.jpeg"
+      }
     },
     {
       "id": "2026-11-17-black-hole-physics-claude",
@@ -190,7 +200,22 @@
           "label": "ScienceDaily",
           "url": "https://www.sciencedaily.com/releases/2026/11/261112230456.htm"
         }
-      ]
+      ],
+      "chart": {
+        "title": "Share who died suddenly, per year",
+        "unit": "%",
+        "bars": [
+          {
+            "label": "Group flagged by the AI model",
+            "value": 7
+          },
+          {
+            "label": "Group picked by the standard heart test",
+            "value": 4.6
+          }
+        ],
+        "note": "Figures as reported in the study; the first is approximate."
+      }
     },
     {
       "id": "2026-11-11-alphagenome-2",

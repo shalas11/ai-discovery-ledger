@@ -151,3 +151,22 @@ footer a:hover { color: var(--ink); }
   .pager { grid-template-columns: 1fr; }
   .pager .older { text-align: left; }
 }
+
+/* Pictures and charts. Most stories have neither. */
+.figure { margin: 0 0 22px; }
+.figure img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+.figure figcaption, .chart-note { margin-top: 8px; font-family: var(--sans); font-size: 12px; line-height: 1.45; color: var(--gray); }
+.figure .credit a { color: var(--gray); text-decoration: underline; text-underline-offset: 2px; }
+.figure.side { float: right; width: min(40%, 300px); margin: 6px 0 18px 34px; }
+.lead::after, .story::after { content: ""; display: block; clear: both; }
+.lead .unverified, .story .unverified, .chart { display: flow-root; }
+.chart { margin: 24px 0 0; padding-top: 16px; border-top: 1px solid var(--ink); }
+.bars { display: grid; gap: 14px; margin-top: 14px; max-width: 520px; }
+.bar-row { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 6px 16px; }
+.bar-label { font-family: var(--sans); font-size: 13.5px; line-height: 1.3; }
+.bar-value { font-family: var(--sans); font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.bar-track { grid-column: 1 / -1; height: 12px; background: #ecece8; }
+.bar { display: block; height: 100%; background: var(--ink); border-radius: 0 3px 3px 0; }
+@media (max-width: 560px) {
+  .figure.side { float: none; width: min(100%, 270px); margin: 4px auto 22px; }
+}

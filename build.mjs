@@ -3,7 +3,7 @@
 //   node build.mjs
 // SITE_URL overrides site.config.json's siteUrl (the deploy workflow sets it, so the
 // site works both at <user>.github.io/<repo>/ and at the custom domain).
-import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -39,6 +39,20 @@ function validate() {
     for (const k of ["system", "open"]) if (e[k] != null && typeof e[k] !== "string") errs.push(`${at}: "${k}" must be text`);
     if (!Array.isArray(e.src) || !e.src.length) errs.push(`${at}: needs at least one source`);
     for (const s of e.src || []) if (!s || !s.label || !isUrl(s.url)) errs.push(`${at}: each source needs a label and an http(s) url`);
+    if (e.image != null) {
+      const im = e.image;
+      if (typeof im.file !== "string" || !/^[a-z0-9][a-z0-9._-]*.(jpg|jpeg|png|webp)$/.test(im.file)) errs.push(`${at}: image.file must be a plain .jpg, .png or .webp file name`);
+      else if (!existsSync(join(ROOT, "static", "images", im.file))) errs.push(`${at}: static/images/${im.file} does not exist`);
+      if (!(im.width > 0) || !(im.height > 0)) errs.push(`${at}: image needs its width and height in pixels`);
+      for (const k of ["alt", "credit", "license"]) if (typeof im[k] !== "string" || !im[k].trim()) errs.push(`${at}: image.${k} is missing`);
+      if (!isUrl(im.source)) errs.push(`${at}: image.source must be the http(s) page the image came from`);
+    }
+    if (e.chart != null) {
+      const c = e.chart;
+      if (typeof c.title !== "string" || !c.title.trim()) errs.push(`${at}: chart.title is missing`);
+      if (!Array.isArray(c.bars) || c.bars.length < 2 || c.bars.length > 6) errs.push(`${at}: chart needs 2 to 6 bars`);
+      for (const bar of c.bars || []) if (!bar || !bar.label || !(bar.value > 0)) errs.push(`${at}: each chart bar needs a label and a value above zero`);
+    }
   }
   if (errs.length) {
     console.error("data/entries.json has problems:\n  - " + errs.join("\n  - "));
@@ -71,6 +85,23 @@ const fields = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.loc
 
 const sources = (e) => `<p class="src">Sources: ${e.src.map((s) => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>`).join(", ")}</p>`;
 const byline = (e) => esc(e.who + (e.system ? " · " + e.system : ""));
+const imagePath = (e) => `${BASE}images/${e.image.file}`;
+// A picture: beside the text when it is tall (a portrait), across the column when it is wide.
+function figure(e) {
+  const im = e.image;
+  if (!im) return "";
+  const side = im.height >= im.width * 0.9;
+  return `<figure class="figure${side ? " side" : ""}"><img src="${imagePath(e)}" width="${im.width}" height="${im.height}" alt="${esc(im.alt)}" decoding="async"><figcaption>${im.caption ? esc(im.caption) + " " : ""}<span class="credit">Image: <a href="${esc(im.source)}" rel="noopener">${esc(im.credit)}</a>, ${esc(im.license.toLowerCase())}.</span></figcaption></figure>`;
+}
+// A small bar chart from the story's own numbers: one row per bar, name and figure in text.
+function chart(e) {
+  const c = e.chart;
+  if (!c) return "";
+  const max = Math.max(...c.bars.map((x) => x.value));
+  const rows = c.bars.map((x) => { const v = `${x.value}${c.unit || ""}`; return `<div class="bar-row" title="${esc(x.label)}: ${esc(v)}"><span class="bar-label">${esc(x.label)}</span><span class="bar-value">${esc(v)}</span><span class="bar-track" aria-hidden="true"><span class="bar" style="width:${((x.value / max) * 100).toFixed(1)}%"></span></span></div>`; }).join("");
+  return `<figure class="chart"><figcaption class="label">${esc(c.title)}</figcaption><div class="bars">${rows}</div>${c.note ? `<p class="chart-note">${esc(c.note)}</p>` : ""}</figure>`;
+}
+const ogImage = (e) => (e && e.image && e.image.width >= 1000 && e.image.width / e.image.height >= 1.5 ? abs(imagePath(e)) : `${SITE_URL}/og.png`);
 const unverified = (e) => (e.open ? `<div class="unverified"><p class="label">Still unverified</p><p>${esc(e.open)}</p></div>` : "");
 
 /* ---------- shared page shell ---------- */
@@ -107,7 +138,7 @@ function signup() {
   </section>`;
 }
 
-function page({ title, description, path, type = "website", current, big = false, body, head = "", script = false }) {
+function page({ title, description, path, type = "website", current, big = false, body, head = "", script = false, image = `${SITE_URL}/og.png` }) {
   const url = abs(path);
   return `<!DOCTYPE html>
 <html lang="en">
@@ -122,9 +153,7 @@ function page({ title, description, path, type = "website", current, big = false
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${esc(url)}">
-<meta property="og:image" content="${esc(SITE_URL)}/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="${esc(image)}">
 <meta property="og:image:alt" content="AI Discovery Ledger: news of discoveries made by AI systems">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light">
@@ -164,7 +193,9 @@ function home() {
       <p class="label accent">${esc(lead.field)} · <time datetime="${lead.date}">${fmtLong(lead.date)}</time></p>
       <h1><a href="${entryPath(lead)}">${esc(lead.title)}</a></h1>
       <p class="byline">${byline(lead)}</p>
+      ${figure(lead)}
       <p class="sum">${esc(lead.sum)}</p>
+      ${chart(lead)}
       ${unverified(lead)}
       ${sources(lead)}
     </article>`
@@ -264,13 +295,16 @@ function entryPage(e, i) {
     description: clip(e.sum, 240),
     path: entryPath(e),
     type: "article",
+    image: ogImage(e),
     current: e.field,
     body: `  <main>
   <article class="story">
     <p class="label accent"><a href="${fieldPath(e.field)}">${esc(e.field)}</a> · <time datetime="${e.date}">${fmtFull(e.date)}</time></p>
     <h1>${esc(e.title)}</h1>
     <p class="byline">${byline(e)}</p>
+    ${figure(e)}
     <p class="sum">${esc(e.sum)}</p>
+    ${chart(e)}
     ${unverified(e)}
     ${sources(e)}
   </article>
