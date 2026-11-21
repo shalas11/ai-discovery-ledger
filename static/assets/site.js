@@ -1,40 +1,28 @@
-// Filters for the home page. Every entry is already in the HTML; this only shows and hides them.
+// Search on the archive page. Every entry is already in the HTML; this only shows and hides rows.
 (function () {
-  var feed = document.getElementById("feed");
-  var filters = document.getElementById("filters");
-  if (!feed || !filters) return;
-  filters.hidden = false;
+  var box = document.getElementById("search");
+  var input = document.getElementById("q");
+  var holder = document.getElementById("rows");
+  if (!box || !input || !holder) return;
+  box.hidden = false;
 
-  var entries = Array.prototype.map.call(feed.querySelectorAll(".entry"), function (el) {
-    return { el: el, field: el.dataset.field, hay: el.textContent.toLowerCase() };
+  var rows = Array.prototype.map.call(holder.querySelectorAll(".row"), function (el) {
+    return { el: el, hay: el.textContent.toLowerCase() };
   });
-  var days = feed.querySelectorAll(".day");
+  var months = holder.querySelectorAll(".month");
   var empty = document.getElementById("empty");
-  var chips = filters.querySelectorAll(".chip");
-  var state = { field: "All", q: "" };
 
-  function apply() {
+  input.addEventListener("input", function () {
+    var q = input.value.trim().toLowerCase();
     var shown = 0;
-    entries.forEach(function (e) {
-      var ok = (state.field === "All" || e.field === state.field) &&
-        (!state.q || e.hay.indexOf(state.q) !== -1);
-      e.el.hidden = !ok;
+    rows.forEach(function (r) {
+      var ok = !q || r.hay.indexOf(q) !== -1;
+      r.el.hidden = !ok;
       if (ok) shown++;
     });
-    Array.prototype.forEach.call(days, function (d) {
-      var n = d.querySelectorAll(".entry:not([hidden])").length;
-      d.hidden = n === 0;
-      d.querySelector("h2 span").textContent = n + (n === 1 ? " entry" : " entries");
+    Array.prototype.forEach.call(months, function (m) {
+      m.hidden = m.querySelectorAll(".row:not([hidden])").length === 0;
     });
     empty.hidden = shown !== 0;
-  }
-
-  Array.prototype.forEach.call(chips, function (chip) {
-    chip.addEventListener("click", function () {
-      state.field = chip.dataset.field;
-      Array.prototype.forEach.call(chips, function (c) { c.setAttribute("aria-pressed", String(c === chip)); });
-      apply();
-    });
   });
-  document.getElementById("q").addEventListener("input", function (ev) { state.q = ev.target.value.trim().toLowerCase(); apply(); });
 })();
