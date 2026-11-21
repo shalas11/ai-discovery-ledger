@@ -21,7 +21,8 @@ Draft this week's issue of "AI Discovery Ledger Weekly", the Friday email for th
    - "Subject line" and "Preview" as two short labelled lines.
    - The parts above as `##` sections.
    - Last line, in italics: "This newsletter is written from the AI Discovery Ledger, updated twice a day. Reply to this email with tips or corrections."
-   - A final `## Before you send` section for Steve only (not part of the email): a short checklist of anything he should check, such as a story resting on one source, a week with nothing new, or a story whose `open` text looks out of date.
+   - A `## Before you send` section for Steve only (not part of the email): a short checklist of anything he should check, such as a story resting on one source, a week with nothing new, or a story whose `open` text looks out of date.
+   - A final `## Paste into Buttondown` section. Its first line tells Steve: "In Buttondown: new email, Actions, Markdown mode. Paste the subject line above as the subject and the block below as the body." Then one fenced `html` code block holding the complete designed email. Build that HTML from `tools/email-example.html` in the repository: read the file and keep its structure, its inline styles and its order exactly (issue line, masthead, the lead with its "Still unverified" box and links, "Also this week" items, the count line, the closing line), replacing only the words, dates, links and the number of "Also this week" items with this issue's. Add a "Follow-ups" block in the same style as "Also this week" only when the issue has follow-ups. Rules that keep it rendering: no blank lines anywhere inside the HTML, no line indented, every style inline, no `<style>` or `<script>` tags, no images.
    Write the whole draft before creating the doc, then create it with its outline and fill it section by section as the guide says.
 
 6. Send Steve a push notification: "Issue <N> draft is ready: <subject line>", with the doc's link.

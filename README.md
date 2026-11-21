@@ -56,3 +56,7 @@ node tools/serve.mjs
 `site.config.json` holds the fallback site address (the deploy uses the GitHub Pages address, now https://aidiscoveryledger.com) and the Buttondown username. While `buttondownUsername` is empty the sign-up box shows a "first issue is on its way" line in place of the form.
 
 The image used for link previews is `static/og.png`, rendered from `tools/og-card.html` by `tools/render-og.sh`.
+
+## The weekly email
+
+The email is sent from Buttondown using its Classic template with the accent colour set to black. Its design lives in the email itself: `tools/email-example.html` is Issue 1, written as HTML with inline styles and pasted into a Buttondown draft in Markdown mode. Later issues keep that structure and change only the words and links.
