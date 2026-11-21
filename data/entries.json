@@ -2,6 +2,23 @@
   "checked": "2026-11-20",
   "entries": [
     {
+      "id": "2026-11-18-openai-chip-design",
+      "date": "2026-11-18",
+      "logged": "2026-11-20",
+      "field": "Engineering",
+      "title": "OpenAI says its models redesigned parts of its own AI chip and found gains in AMD processor designs",
+      "who": "OpenAI, with AMD and Synopsys",
+      "system": "OpenAI models including GPT-6.2 Astra",
+      "sum": "OpenAI says changes its models proposed for Jalapeño, its first in-house inference chip, shrank the logic area of the vector unit by about 13% and the matrix unit by about 10%, and that these changes worked in the finished silicon. One redesigned multiplier used about 15% less area and finished in one clock cycle instead of two. On AMD's flagship GPU designs the models found power, performance and area gains of up to 14% over heavily tuned baselines, and some of those changes are in a chip AMD has sent for manufacturing.",
+      "open": "OpenAI is the only source, and AMD is not quoted. The baselines are not disclosed, the Jalapeño area figures come from synthesis rather than final layout, and no test results have been reported for the AMD chip.",
+      "src": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/advancing-chip-design-with-our-models/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-20-riemann-hypothesis-claude-lean",
       "date": "2026-11-20",
       "logged": "2026-11-20",
@@ -10,7 +27,7 @@
       "who": "Levent Alpöge",
       "system": "Claude",
       "sum": "In a four-page note posted on November 20, Levent Alpöge says that, working with Claude, he found a proof of the Riemann hypothesis, the 1859 conjecture about how prime numbers are spread out, and that the method also settles the Generalized Riemann Hypothesis. He has released only a Lean formalization, split into 14 archive files, because he says a written version runs past 250,000 pages. He credits Claude with key steps near the end, including the idea of chaining theta lifts about the square root of X times.",
-      "open": "No outside mathematician has checked it and there is no written paper. Alpöge says he does not yet understand much of the argument himself. One report says the main theorem statements compile in Lean, but nobody has yet confirmed that the Lean definitions state the standard hypothesis.",
+      "open": "No written paper exists and no outside mathematician has checked the mathematics itself; Alpöge says he does not yet understand much of the argument. MIT's Andrew Sutherland has compiled the Lean code on his own and says the kernel rechecked it using only Lean's three standard axioms. Kevin Buzzard says the open questions are whether the Lean statement really is the Riemann hypothesis and a pending comparator run, which tests that the statement's terms were not quietly redefined.",
       "src": [
         {
           "label": "Alpöge's note (PDF)",
@@ -23,6 +40,10 @@
         {
           "label": "Interesting Engineering",
           "url": "https://interestingengineering.com/ai-robotics/anthropic-167-year-old-riemann-hypothesis-claude"
+        },
+        {
+          "label": "Scientific American",
+          "url": "https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/"
         }
       ]
     },
