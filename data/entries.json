@@ -1,6 +1,27 @@
 {
-  "checked": "2026-11-20",
+  "checked": "2026-11-21",
   "entries": [
+    {
+      "id": "2026-11-06-verified-quantum-programs",
+      "date": "2026-11-06",
+      "logged": "2026-11-21",
+      "field": "Computer science",
+      "title": "Gemini agents design cheaper quantum algorithms and prove them correct in Lean",
+      "who": "Google DeepMind and Google Quantum AI",
+      "system": "Teams of Gemini 4 agents working in the Lean theorem prover",
+      "sum": "Agent teams wrote quantum programs against specifications that people stated in Lean, and Lean checked both that each program is correct and what it costs. The headline result is a routine for preparing an arcsin state whose estimated cost, measured as logical qubits times T gates, is about 290 times lower than a published design. The agents also cut estimated costs about 12-fold for a fusion stopping-power simulation, about 8-fold for a photochemistry simulation and about 2.5-fold for a drug-metabolism enzyme, and found up to 2.57 times fewer rounds for a multi-target Grover search.",
+      "open": "Not peer reviewed, and Google is the only source. Every figure is a resource estimate on paper, not a run on quantum hardware, and some baselines were adjusted by the authors. The paper does not say whether the Lean library has been released.",
+      "src": [
+        {
+          "label": "arXiv 2611.09822",
+          "url": "https://arxiv.org/abs/2611.09822"
+        },
+        {
+          "label": "Quantum Computing Report",
+          "url": "https://quantumcomputingreport.com/google-deepmind-and-google-quantum-ai-use-lean-4-to-discover-formally-verified-quantum-algorithms/"
+        }
+      ]
+    },
     {
       "id": "2026-11-18-openai-chip-design",
       "date": "2026-11-18",
