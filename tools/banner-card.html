@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Source for the social profile banners. Open with ?w=1500&h=500 (X, Bluesky) or ?w=1128&h=191 (LinkedIn);
+     the banner is drawn in the top-left corner at exactly that size. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,400&display=block" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; overflow: hidden; background: #fdfdfc; color: #111111; }
+  .canvas { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; font-family: "Newsreader", Georgia, serif; background: #fdfdfc; }
+  .frame { width: 84%; border-top: calc(var(--u) * 0.6) solid #111111; border-bottom: calc(var(--u) * 1.6) double #111111; padding: calc(var(--u) * 7) 0 calc(var(--u) * 8); margin-bottom: calc(var(--u) * 6); }
+  h1 { margin: 0; font-size: calc(var(--u) * 21); font-weight: 600; line-height: 1; letter-spacing: -.02em; white-space: nowrap; }
+  p { margin: calc(var(--u) * 4) 0 0; font-size: calc(var(--u) * 7.4); font-style: italic; color: #5a5a5a; }
+  .wide .frame { width: 56%; padding: calc(var(--u) * 10) 0 calc(var(--u) * 11); margin-bottom: 0; }
+  .wide h1 { font-size: calc(var(--u) * 34); }
+  .wide p { font-size: calc(var(--u) * 13); }
+</style>
+</head>
+<body>
+  <div class="canvas" id="c">
+    <div class="frame">
+      <h1>AI Discovery Ledger</h1>
+      <p>News of discoveries made by AI systems</p>
+    </div>
+  </div>
+  <script>
+    var q = new URLSearchParams(location.search), w = +q.get("w") || 1500, h = +q.get("h") || 500, c = document.getElementById("c");
+    c.style.width = w + "px"; c.style.height = h + "px"; c.style.setProperty("--u", h / 100 + "px");
+    if (w / h > 4) c.classList.add("wide");
+  </script>
+</body>
+</html>
