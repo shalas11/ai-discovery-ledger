@@ -36,6 +36,8 @@ Everything on the site comes from `data/entries.json`. Edit that file and push t
 | `logged` | When the entry was added here. Optional; used for the feed order. |
 | `open` | What is still unverified or limited. May be an empty string. Rewritten when follow-up news arrives. |
 | `src` | At least one source with a label and a link. |
+| `image` | Optional picture, shown on the story page and when the story leads the home page. Needs `file` (in `static/images/`), `width`, `height`, `alt`, `credit`, `license` and `source`; `caption` is optional. Only free-licensed images. |
+| `chart` | Optional bar chart from the story's own numbers: `title`, optional `unit` and `note`, and 2 to 6 `bars` with a `label` and `value`. |
 
 New entries go at the top of the list.
 
