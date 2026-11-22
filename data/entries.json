@@ -48,7 +48,7 @@
       "who": "Levent Alpöge",
       "system": "Claude",
       "sum": "In a four-page note posted on November 20, Levent Alpöge says that, working with Claude, he found a proof of the Riemann hypothesis, the 1859 conjecture about how prime numbers are spread out, and that the method also settles the Generalized Riemann Hypothesis. He has released only a Lean formalization, split into 14 archive files, because he says a written version runs past 250,000 pages. He credits Claude with key steps near the end, including the idea of chaining theta lifts about the square root of X times.",
-      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, after MIT's Andrew Sutherland recompiled it on the kernel's three standard axioms and a comparator run found no redefined terms in the statement. What is still missing is mathematics people can read: there is no written paper, no peer review, and Alpöge says a shorter human version will take months. A separate, all-human draft proof by Alessandro Masullo, reviewed for months by Stanford's Brian Conrad, was posted by Ravi Vakil the same day; mathematicians have flagged problems in it and it is not yet accepted.",
+      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, and several people have rebuilt it independently. On November 21 Michael Rubinstein of the University of Waterloo reported that all 175,187 modules compile and pass Lean's kernel, that the five main theorems rest only on Lean's three standard axioms, and that a second, independent checker found no errors. Readable mathematics is still thin. Rubinstein has posted a 164-page draft guide, written with help from AI models, that reduces the zeta-function case to one inequality about weighted sums over primes; it does not prove that inequality itself, which still comes only from the Lean code. There is no paper from Alpöge and no peer review. A separate, all-human draft proof by Alessandro Masullo, reviewed for months by Stanford's Brian Conrad, was posted by Ravi Vakil the same day; mathematicians have flagged problems in it and it is not yet accepted.",
       "src": [
         {
           "label": "Alpöge's note (PDF)",
@@ -69,6 +69,10 @@
         {
           "label": "The Decoder",
           "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/"
+        },
+        {
+          "label": "Rubinstein, University of Waterloo",
+          "url": "https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/"
         }
       ],
       "image": {
