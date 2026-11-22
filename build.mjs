@@ -330,6 +330,8 @@ function aboutPage() {
     <p class="sum">The ${esc(config.name)} publishes news of scientific and technical discoveries made by AI systems: new proofs, designs that worked in the lab, new algorithms, patterns in data that people had missed.</p>
     <p>A result belongs here when an AI system produced the central finding. New model releases, funding rounds, benchmark scores and product launches are left out, as are results where AI only sped up routine work.</p>
     <p>Each entry says what was found, who found it and with which system, and links its sources. Summaries are written from those sources. Where a lab is the only source for its own claim, the entry says so, and the "Still unverified" note says what has not been checked yet. When follow-up news arrives, that note is rewritten.</p>
+    <p>The ledger is run by Steve Halas, a software developer in Boston. Entries are found and drafted by an automated process built on AI models. It searches primary sources and science reporting twice a day, writes each summary from the sources it links, and records what is still unverified. Steve reviews the weekly email before it is sent.</p>
+    <p>If an entry is wrong, write to <a href="mailto:weekly@aidiscoveryledger.com">weekly@aidiscoveryledger.com</a> and it will be corrected.</p>
     <p>New entries are added daily. A weekly email goes out every Friday.</p>
   </article>
   </main>`,
