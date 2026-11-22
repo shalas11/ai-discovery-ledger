@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-21",
+  "checked": "2026-11-22",
   "entries": [
     {
       "id": "2026-11-06-verified-quantum-programs",
@@ -48,7 +48,7 @@
       "who": "Levent Alpöge",
       "system": "Claude",
       "sum": "In a four-page note posted on November 20, Levent Alpöge says that, working with Claude, he found a proof of the Riemann hypothesis, the 1859 conjecture about how prime numbers are spread out, and that the method also settles the Generalized Riemann Hypothesis. He has released only a Lean formalization, split into 14 archive files, because he says a written version runs past 250,000 pages. He credits Claude with key steps near the end, including the idea of chaining theta lifts about the square root of X times.",
-      "open": "No written paper exists and no outside mathematician has checked the mathematics itself; Alpöge says he does not yet understand much of the argument. MIT's Andrew Sutherland has compiled the Lean code on his own and says the kernel rechecked it using only Lean's three standard axioms. Kevin Buzzard says the open questions are whether the Lean statement really is the Riemann hypothesis and a pending comparator run, which tests that the statement's terms were not quietly redefined.",
+      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, after MIT's Andrew Sutherland recompiled it on the kernel's three standard axioms and a comparator run found no redefined terms in the statement. What is still missing is mathematics people can read: there is no written paper, no peer review, and Alpöge says a shorter human version will take months. A separate, all-human draft proof by Alessandro Masullo, reviewed for months by Stanford's Brian Conrad, was posted by Ravi Vakil the same day; mathematicians have flagged problems in it and it is not yet accepted.",
       "src": [
         {
           "label": "Alpöge's note (PDF)",
@@ -65,6 +65,10 @@
         {
           "label": "Scientific American",
           "url": "https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/"
+        },
+        {
+          "label": "The Decoder",
+          "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/"
         }
       ],
       "image": {
