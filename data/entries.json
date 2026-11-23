@@ -1,6 +1,27 @@
 {
-  "checked": "2026-11-22",
+  "checked": "2026-11-23",
   "entries": [
+    {
+      "id": "2026-11-18-sample-compression-conjecture",
+      "date": "2026-11-18",
+      "logged": "2026-11-23",
+      "field": "Computer science",
+      "title": "Gemini agents prove a weaker form of the 1995 sample compression conjecture",
+      "who": "Yang Cai, Vineet Gupta, Yanchen Jiang, Christopher Liaw, Aranyak Mehta, Shay Moran, Grigoris Velegkas, Di Wang and Manfred K. Warmuth, with Google",
+      "system": "Cogentic multi-agent orchestration running on Gemini 4 Carbon",
+      "sum": "A preprint posted on November 18 shows that any yes-or-no concept class of VC dimension d can be compressed to about d squared times log squared d labelled examples, settling the polynomial version of a learning-theory conjecture posed by Floyd and Warmuth in 1995. The best general bound before this, from Moran and Yehudayoff in 2016, grew exponentially with d. The authors say an agent system on Gemini 4 Carbon found the proof on its own, stepping down from a d to the 16th bound to the final one, at a cost of about $344 in API fees; the people simplified and wrote it up.",
+      "open": "Not peer reviewed, and the authors, who include Google researchers, are the only source. The original conjecture, a scheme of size proportional to d, is still open.",
+      "src": [
+        {
+          "label": "arXiv 2611.25011",
+          "url": "https://arxiv.org/abs/2611.25011"
+        },
+        {
+          "label": "Paper with AI disclosure (HTML)",
+          "url": "https://arxiv.org/html/2611.25011"
+        }
+      ]
+    },
     {
       "id": "2026-11-06-verified-quantum-programs",
       "date": "2026-11-06",
@@ -48,7 +69,7 @@
       "who": "Levent Alpöge",
       "system": "Claude",
       "sum": "In a four-page note posted on November 20, Levent Alpöge says that, working with Claude, he found a proof of the Riemann hypothesis, the 1859 conjecture about how prime numbers are spread out, and that the method also settles the Generalized Riemann Hypothesis. He has released only a Lean formalization, split into 14 archive files, because he says a written version runs past 250,000 pages. He credits Claude with key steps near the end, including the idea of chaining theta lifts about the square root of X times.",
-      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, and several people have rebuilt it independently. On November 21 Michael Rubinstein of the University of Waterloo reported that all 175,187 modules compile and pass Lean's kernel, that the five main theorems rest only on Lean's three standard axioms, and that a second, independent checker found no errors. Readable mathematics is still thin. Rubinstein has posted a 164-page draft guide, written with help from AI models, that reduces the zeta-function case to one inequality about weighted sums over primes; it does not prove that inequality itself, which still comes only from the Lean code. There is no paper from Alpöge and no peer review. A separate, all-human draft proof by Alessandro Masullo, reviewed for months by Stanford's Brian Conrad, was posted by Ravi Vakil the same day; mathematicians have flagged problems in it and it is not yet accepted.",
+      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, and several people have rebuilt it independently. On November 21 Michael Rubinstein of the University of Waterloo reported that all 175,187 modules compile and pass Lean's kernel, that the five main theorems rest only on Lean's three standard axioms, and that a second, independent checker found no errors. Readable mathematics is still thin. Rubinstein has posted a 164-page draft guide, written with help from AI models, that reduces the zeta-function case to one inequality about weighted sums over primes; it does not prove that inequality itself, which still comes only from the Lean code. There is no paper from Alpöge and no peer review, and Andrew Granville told Nature the four-page announcement is garbled and should have come with a clearer write-up. A separate, all-human draft proof by Alessandro Masullo, reviewed for months by Stanford's Brian Conrad, was posted by Ravi Vakil the same day; mathematicians have flagged problems in it and it is not yet accepted.",
       "src": [
         {
           "label": "Alpöge's note (PDF)",
@@ -73,6 +94,10 @@
         {
           "label": "Rubinstein, University of Waterloo",
           "url": "https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/"
+        },
+        {
+          "label": "Nature",
+          "url": "https://www.nature.com/articles/d41586-026-03812-7"
         }
       ],
       "image": {
