@@ -170,3 +170,5 @@ footer a:hover { color: var(--ink); }
 @media (max-width: 560px) {
   .figure.side { float: none; width: min(100%, 270px); margin: 4px auto 22px; }
 }
+/* Keeps "Announced on Nov 18" and "Added Nov 23" each on one line. */
+.nowrap { white-space: nowrap; }

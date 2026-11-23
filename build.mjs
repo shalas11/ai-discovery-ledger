@@ -102,6 +102,11 @@ function chart(e) {
   return `<figure class="chart"><figcaption class="label">${esc(c.title)}</figcaption><div class="bars">${rows}</div>${c.note ? `<p class="chart-note">${esc(c.note)}</p>` : ""}</figure>`;
 }
 const ogImage = (e) => (e && e.image && e.image.width >= 1000 && e.image.width / e.image.height >= 1.5 ? abs(imagePath(e)) : `${SITE_URL}/og.png`);
+// A story's date. When the ledger logged it later than it was announced, both: "Announced on <date> · Added <date>".
+const when = (e, fmt, fmtAdded = fmt) => {
+  const d = `<time datetime="${e.date}">${fmt(e.date)}</time>`;
+  return e.logged && e.logged > e.date ? `<span class="nowrap">Announced on ${d}</span>&nbsp;· <span class="nowrap">Added <time datetime="${e.logged}">${fmtAdded(e.logged)}</time></span>` : d;
+};
 const unverified = (e) => (e.open ? `<div class="unverified"><p class="label">Still unverified</p><p>${esc(e.open)}</p></div>` : "");
 
 /* ---------- shared page shell ---------- */
@@ -190,7 +195,7 @@ function home() {
   const latest = rest.slice(0, 5), more = rest.slice(5, 11);
   const leadHtml = lead
     ? `<article class="lead">
-      <p class="label accent">${esc(lead.field)} · <time datetime="${lead.date}">${fmtLong(lead.date)}</time></p>
+      <p class="label accent">${esc(lead.field)} · ${when(lead, fmtLong)}</p>
       <h1><a href="${entryPath(lead)}">${esc(lead.title)}</a></h1>
       <p class="byline">${byline(lead)}</p>
       ${figure(lead)}
@@ -203,14 +208,14 @@ function home() {
   const latestHtml = latest.length
     ? `<aside class="latest" aria-labelledby="latest-h">
       <h2 class="label" id="latest-h">Latest</h2>
-      ${latest.map((e) => `<a class="item" href="${entryPath(e)}"><span class="meta">${esc(e.field)} · ${fmtShort(e.date)}</span><span class="title">${esc(e.title)}</span></a>`).join("\n      ")}
+      ${latest.map((e) => `<a class="item" href="${entryPath(e)}"><span class="meta">${esc(e.field)} · ${when(e, fmtShort)}</span><span class="title">${esc(e.title)}</span></a>`).join("\n      ")}
     </aside>`
     : "";
   const moreHtml = more.length
     ? `  <section class="more" aria-labelledby="more-h">
     <h2 class="label" id="more-h">More discoveries</h2>
     <div class="grid">
-      ${more.map((e) => `<article><p class="meta">${esc(e.field)} · ${fmtShort(e.date)}</p><h3><a href="${entryPath(e)}">${esc(e.title)}</a></h3><p>${esc(clip(e.sum, 190))}</p></article>`).join("\n      ")}
+      ${more.map((e) => `<article><p class="meta">${esc(e.field)} · ${when(e, fmtShort)}</p><h3><a href="${entryPath(e)}">${esc(e.title)}</a></h3><p>${esc(clip(e.sum, 190))}</p></article>`).join("\n      ")}
     </div>
     <p class="all-link"><a href="${BASE}archive/">See all ${entries.length} discoveries</a></p>
   </section>`
@@ -299,7 +304,7 @@ function entryPage(e, i) {
     current: e.field,
     body: `  <main>
   <article class="story">
-    <p class="label accent"><a href="${fieldPath(e.field)}">${esc(e.field)}</a> · <time datetime="${e.date}">${fmtFull(e.date)}</time></p>
+    <p class="label accent"><a href="${fieldPath(e.field)}">${esc(e.field)}</a> · ${when(e, fmtFull, fmtLong)}</p>
     <h1>${esc(e.title)}</h1>
     <p class="byline">${byline(e)}</p>
     ${figure(e)}
