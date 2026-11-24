@@ -1,6 +1,39 @@
 {
-  "checked": "2026-11-23",
+  "checked": "2026-11-24",
   "entries": [
+    {
+      "id": "2026-11-20-navier-stokes-unforced-blowup",
+      "date": "2026-11-20",
+      "logged": "2026-11-24",
+      "field": "Mathematics",
+      "title": "Mathematicians using Claude and Codex claim Navier–Stokes fluids can blow up with no outside force",
+      "who": "Levent Alpöge (Anthropic) and Tristan Buckmaster (New York University); the Euler paper adds Matei Coiculescu (NYU)",
+      "system": "Claude and Codex",
+      "sum": "A 79-page paper posted on November 20 claims smooth starting data for the three-dimensional Navier–Stokes equations whose solution breaks down in finite time with no external force, the version of the Millennium Prize problem that OpenAI's forced result in September did not reach. The authors say Anthropic's models wrote the first force-free proof from their earlier drafts and that they then reworked it with Claude and Codex; it comes with a Lean formalization of about 600,000 lines in roughly 2,270 files. A companion 55-page paper with Coiculescu, also done with heavy AI help, builds smooth periodic data for the 3D Euler equations whose vorticity becomes infinite in finite time.",
+      "open": "Not peer reviewed, and no outside expert has checked it. The numerical certificate the proof depends on has not been released, only its hash, and the 128-bit interval-arithmetic check sits outside the Lean code. The Lean files were patched on release day and the patched package was not rebuilt. Buckmaster calls the write-up unpolished; Terence Tao says it is technically readable and its strategy is clear, but a proper written proof still needs work.",
+      "src": [
+        {
+          "label": "Paper and Lean code (GitHub)",
+          "url": "https://github.com/tristanbuckmaster/navier-stokes"
+        },
+        {
+          "label": "Euler paper (PDF)",
+          "url": "https://cims.nyu.edu/~tristanb/cc.pdf"
+        },
+        {
+          "label": "Terence Tao",
+          "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/"
+        },
+        {
+          "label": "Scientific American",
+          "url": "https://www.scientificamerican.com/article/ai-just-solved-the-real-navier-stokes-problem/"
+        },
+        {
+          "label": "The Next Web",
+          "url": "https://thenextweb.com/news/navier-stokes-blow-up-without-force-buckmaster-alpoge"
+        }
+      ]
+    },
     {
       "id": "2026-11-20-nl-equals-ul",
       "date": "2026-11-20",
@@ -94,7 +127,7 @@
       "who": "Levent Alpöge",
       "system": "Claude",
       "sum": "In a four-page note posted on November 20, Levent Alpöge says that, working with Claude, he found a proof of the Riemann hypothesis, the 1859 conjecture about how prime numbers are spread out, and that the method also settles the Generalized Riemann Hypothesis. He has released only a Lean formalization, split into 14 archive files, because he says a written version runs past 250,000 pages. He credits Claude with key steps near the end, including the idea of chaining theta lifts about the square root of X times.",
-      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, and several people have rebuilt it independently. On November 21 Michael Rubinstein of the University of Waterloo reported that all 175,187 modules compile and pass Lean's kernel, that the five main theorems rest only on Lean's three standard axioms, and that a second, independent checker found no errors. Readable mathematics is still thin. Rubinstein has posted a 164-page draft guide, written with help from AI models, that reduces the zeta-function case to one inequality about weighted sums over primes; it does not prove that inequality itself, which still comes only from the Lean code. There is no paper from Alpöge and no peer review, and Andrew Granville told Nature the four-page announcement is garbled and should have come with a clearer write-up. A separate, all-human draft proof by Alessandro Masullo, reviewed for months by Stanford's Brian Conrad, was posted by Ravi Vakil the same day; mathematicians have flagged problems in it and it is not yet accepted.",
+      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, and several people have rebuilt it independently. On November 21 Michael Rubinstein of the University of Waterloo reported that all 175,187 modules compile and pass Lean's kernel, that the five main theorems rest only on Lean's three standard axioms, and that a second, independent checker found no errors. Readable mathematics is still thin. Rubinstein's draft guide, written with help from AI models, grew from 164 to 265 pages in a second version on November 22. It derives the zeta-function case from one inequality about weighted sums over primes and breaks that inequality down into thirteen numbered hypotheses, none of which it proves; those still rest only on the Lean code, and the guide calls itself a work in progress. There is no paper from Alpöge and no peer review, and Andrew Granville told Nature the four-page announcement is garbled and should have come with a clearer write-up. A separate, all-human draft proof by Alessandro Masullo, reviewed for months by Stanford's Brian Conrad, was posted by Ravi Vakil the same day; mathematicians have flagged problems in it and it is not yet accepted.",
       "src": [
         {
           "label": "Alpöge's note (PDF)",
