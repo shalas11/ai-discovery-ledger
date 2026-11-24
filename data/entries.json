@@ -2,6 +2,31 @@
   "checked": "2026-11-23",
   "entries": [
     {
+      "id": "2026-11-20-nl-equals-ul",
+      "date": "2026-11-20",
+      "logged": "2026-11-23",
+      "field": "Computer science",
+      "title": "Complexity theorist proves NL = UL, saying GPT-6.2 Astra found the proof",
+      "who": "William Hoza, University of Chicago",
+      "system": "GPT-6.2 Astra",
+      "sum": "A short paper posted on November 20 shows that any problem a nondeterministic machine can solve with logarithmic memory can also be solved with the same memory by a machine that has at most one accepting path, settling a long-standing conjecture in complexity theory. The key step is a simple, memory-efficient way to assign weights to the points of a layered graph so that the lightest route between any two connected points is unique; earlier unconditional results needed noticeably more memory, such as log to the power 3/2. In a disclosure at the end of the paper, Hoza says he used GPT-6.2 Astra to discover the proof and to help prepare the paper, and that he takes responsibility for every claim.",
+      "open": "Not peer reviewed, and the paper does not say which steps came from the model. On November 22 the open-source cslib-frontier project merged a Lean formalization of the main theorem that passed its automated checks and two reviewers, but a separate check of the paper's central weight generator was not merged. The result does not settle whether NL equals L, or P versus NP.",
+      "src": [
+        {
+          "label": "ECCC TR26-323",
+          "url": "https://eccc.weizmann.ac.il/report/2026/323/"
+        },
+        {
+          "label": "Lean formalization (cslib-frontier)",
+          "url": "https://github.com/cslib-community/cslib-frontier/pull/7163"
+        },
+        {
+          "label": "Computational Complexity blog",
+          "url": "https://blog.computationalcomplexity.org/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-18-sample-compression-conjecture",
       "date": "2026-11-18",
       "logged": "2026-11-23",
