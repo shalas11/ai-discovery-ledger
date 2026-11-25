@@ -1,6 +1,50 @@
 {
-  "checked": "2026-11-24",
+  "checked": "2026-11-25",
   "entries": [
+    {
+      "id": "2026-11-24-gpt6-protein-design",
+      "date": "2026-11-24",
+      "logged": "2026-11-25",
+      "field": "Biology",
+      "title": "OpenAI says its general-purpose models designed proteins that bound their targets in the lab",
+      "who": "OpenAI, with wet-lab work by its research partner Onava",
+      "system": "GPT-6.2 and an unreleased internal OpenAI model",
+      "sum": "OpenAI reported on November 24 that its GPT-6 models designed protein shapes and sequences by reasoning and writing code, without calling a specialist biology model to make the designs, and that the proteins were then built and tested in a laboratory. Of 322 small binder designs aimed at five human proteins, 35 bound their intended target, a hit rate of about 11 percent, with 18 of the hits against IL-17A. Redesigned antibody loops did better: 128 of 182 designs against IL-4Ra showed binding, about 70 percent, and 179 of 272 redesigned fragments of five therapeutic antibodies still bound their original target.",
+      "open": "Not peer reviewed, and OpenAI is the only source; the lab testing was done by a partner company, Onava. The models are not public and one of the two is internal, so nobody outside can repeat the designs. Binding in a dish is a long way from a drug, and the report says the models were still clearly worse than a specialist tool at predicting a whole protein's structure from its sequence. Specialist models also supplied sequences for some designs and helped choose which ones to test.",
+      "src": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+        },
+        {
+          "label": "OpenAI preprint (PDF)",
+          "url": "https://cdn.openai.com/pdf/gpt-6-a-universal-foundation-model-for-protein-biology.pdf"
+        }
+      ],
+      "chart": {
+        "title": "Share of designs that bound their target in the lab",
+        "unit": "%",
+        "bars": [
+          {
+            "label": "Antibody loops vs IL-4Ra",
+            "value": 70
+          },
+          {
+            "label": "Therapeutic antibody fragments",
+            "value": 66
+          },
+          {
+            "label": "Sequences for unpublished shapes",
+            "value": 13.1
+          },
+          {
+            "label": "New small binders",
+            "value": 10.9
+          }
+        ],
+        "note": "Rounded as reported by OpenAI; counts range from 107 to 322 designs per group."
+      }
+    },
     {
       "id": "2026-11-20-navier-stokes-unforced-blowup",
       "date": "2026-11-20",
@@ -89,7 +133,7 @@
       "who": "Google DeepMind and Google Quantum AI",
       "system": "Teams of Gemini 4 agents working in the Lean theorem prover",
       "sum": "Agent teams wrote quantum programs against specifications that people stated in Lean, and Lean checked both that each program is correct and what it costs. The headline result is a routine for preparing an arcsin state whose estimated cost, measured as logical qubits times T gates, is about 290 times lower than a published design. The agents also cut estimated costs about 12-fold for a fusion stopping-power simulation, about 8-fold for a photochemistry simulation and about 2.5-fold for a drug-metabolism enzyme, and found up to 2.57 times fewer rounds for a multi-target Grover search.",
-      "open": "Not peer reviewed, and Google is the only source. Every figure is a resource estimate on paper, not a run on quantum hardware, and some baselines were adjusted by the authors. The paper does not say whether the Lean library has been released.",
+      "open": "Not peer reviewed, and Google is the only source. Every figure is a resource estimate on paper, not a run on quantum hardware, and some baselines were adjusted by the authors. The circuits are still far beyond what the first error-corrected machines are expected to run. On November 23 DeepMind published the work on its blog and released the Lean library, the problem specifications and the verified solutions on GitHub, so the proofs can now be rebuilt by anyone.",
       "src": [
         {
           "label": "arXiv 2611.09822",
@@ -98,6 +142,14 @@
         {
           "label": "Quantum Computing Report",
           "url": "https://quantumcomputingreport.com/google-deepmind-and-google-quantum-ai-use-lean-4-to-discover-formally-verified-quantum-algorithms/"
+        },
+        {
+          "label": "DeepMind blog",
+          "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+        },
+        {
+          "label": "Lean library (GitHub)",
+          "url": "https://github.com/google-deepmind/formal-quantum-computation"
         }
       ]
     },
