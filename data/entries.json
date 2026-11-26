@@ -2,6 +2,27 @@
   "checked": "2026-11-25",
   "entries": [
     {
+      "id": "2026-11-20-minimax-cryptanalysis",
+      "date": "2026-11-20",
+      "logged": "2026-11-25",
+      "field": "Computer science",
+      "title": "MiniMax says its in-house AI found attacks on eight experimental cryptographic designs",
+      "who": "MiniMax Cyber Team (Lili Tang, Hao Jiang, Yansong Feng; led by Tianyi Li and Guancheng Li)",
+      "system": "MiniMax internal model (unnamed)",
+      "sum": "On November 20 the Chinese AI company MiniMax published papers and code for attacks that it says were mainly discovered by an unreleased internal model, against eight research-grade ciphers, hash functions and post-quantum schemes. They include 94 private keys recovered in the TII McEliece challenges, 55 of them never solved before, with speedups of up to 43,400 times; recovery of a HAWK-256 signing key in about 31 minutes; a forgery against the CAESAR-winning COLM cipher using two queries; and collisions in the Blender and Waterfall hash functions found in under a second.",
+      "open": "MiniMax is the only source, nothing has been peer reviewed, and the company does not say how much of the work people did. None of the targets is a deployed standard such as AES, RSA or SHA-256; most are challenge sets, reduced-round versions or older competition candidates.",
+      "src": [
+        {
+          "label": "MiniMax papers and code (GitHub)",
+          "url": "https://github.com/MiniMax-AI/Research"
+        },
+        {
+          "label": "TechNode",
+          "url": "https://technode.com/2026/11/23/minimax-publishes-ai-discovered-cryptographic-attacks-with-papers-and-code/"
+        }
+      ]
+    },
+    {
       "id": "2026-11-24-gpt6-protein-design",
       "date": "2026-11-24",
       "logged": "2026-11-25",
@@ -178,8 +199,8 @@
       "title": "Mathematician says he and Claude have proved the Riemann hypothesis, and posts only Lean code",
       "who": "Levent Alpöge",
       "system": "Claude",
-      "sum": "In a four-page note posted on November 20, Levent Alpöge says that, working with Claude, he found a proof of the Riemann hypothesis, the 1859 conjecture about how prime numbers are spread out, and that the method also settles the Generalized Riemann Hypothesis. He has released only a Lean formalization, split into 14 archive files, because he says a written version runs past 250,000 pages. He credits Claude with key steps near the end, including the idea of chaining theta lifts about the square root of X times.",
-      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, and several people have rebuilt it independently. On November 21 Michael Rubinstein of the University of Waterloo reported that all 175,187 modules compile and pass Lean's kernel, that the five main theorems rest only on Lean's three standard axioms, and that a second, independent checker found no errors. Readable mathematics is still thin. Rubinstein's draft guide, written with help from AI models, grew from 164 to 265 pages in a second version on November 22. It derives the zeta-function case from one inequality about weighted sums over primes and breaks that inequality down into thirteen numbered hypotheses, none of which it proves; those still rest only on the Lean code, and the guide calls itself a work in progress. There is no paper from Alpöge and no peer review, and Andrew Granville told Nature the four-page announcement is garbled and should have come with a clearer write-up. A separate, all-human draft proof by Alessandro Masullo, reviewed for months by Stanford's Brian Conrad, was posted by Ravi Vakil the same day; mathematicians have flagged problems in it and it is not yet accepted.",
+      "sum": "In a four-page note posted on November 20, Levent Alpöge says that, working with Claude, he found a proof of the Riemann hypothesis, the 1859 conjecture about how prime numbers are spread out, and that the method also settles the Generalized Riemann Hypothesis. He has released only a Lean formalization, split into 14 archive files; a footnote saying an AI-written English version ran past 250,000 pages was, he later said, a joke. He credits Claude with key steps near the end, including the idea of chaining theta lifts about the square root of X times.",
+      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, and several people have rebuilt it independently. On November 21 Michael Rubinstein of the University of Waterloo reported that all 175,187 modules compile and pass Lean's kernel and rest only on Lean's three standard axioms. On November 25 Luke Sernau posted two much shorter Lean editions of the same five theorems, about 300,000 and 76,000 lines; MIT's Andrew Sutherland reports that both build cleanly, use only the standard axioms and pass several independent checkers, though the strictest comparison of the longer edition had not finished. Readable mathematics is still thin: Rubinstein's AI-assisted guide breaks the zeta case into thirteen hypotheses it does not prove, and no mathematician has reviewed the argument itself. There is no paper from Alpöge and no peer review. Alpöge has said the 250,000-page figure was a joke and conceded his Lean code contains much unneeded material. The Clay Mathematics Institute lists the problem as active but not solved, since its rules require publication and two years of scrutiny, and Kevin Buzzard says nobody yet understands what the proof shows. A separate, all-human draft proof by Alessandro Masullo, posted by Ravi Vakil the same day, has drawn objections and is not accepted.",
       "src": [
         {
           "label": "Alpöge's note (PDF)",
@@ -208,6 +229,18 @@
         {
           "label": "Nature",
           "url": "https://www.nature.com/articles/d41586-026-03812-7"
+        },
+        {
+          "label": "Sutherland, MIT (checks of shorter editions)",
+          "url": "https://math.mit.edu/~drew/shortgrh/"
+        },
+        {
+          "label": "Shorter Lean editions (GitHub)",
+          "url": "https://github.com/lsernau/grh-lean"
+        },
+        {
+          "label": "The Next Web",
+          "url": "https://thenextweb.com/news/alpoge-250000-page-riemann-proof-figure-joke-lean-clay-active"
         }
       ],
       "image": {
