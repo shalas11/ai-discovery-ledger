@@ -1,6 +1,35 @@
 {
-  "checked": "2026-11-25",
+  "checked": "2026-11-26",
   "entries": [
+    {
+      "id": "2026-11-23-vp-vnp-separation",
+      "date": "2026-11-23",
+      "logged": "2026-11-26",
+      "field": "Computer science",
+      "title": "Anthropic and OpenAI each post AI-found proofs that VP and VNP are different",
+      "who": "Anthropic; OpenAI",
+      "system": "Internal research Claude model; OpenAI models (unnamed)",
+      "sum": "On November 23 both companies released papers claiming to settle Leslie Valiant's 1979 conjecture that the permanent of a matrix cannot be computed by polynomial-size arithmetic circuits, the algebraic counterpart of P versus NP, over every field. Anthropic's 70-page paper, credited to Claude, proves that such circuits need more than m to the power c·(log m)^(1/3) gates and comes with a Lean 4 formalization; OpenAI's 30-page paper gives a bound of the form exp(Ω((log n)^(5/4))) and links a Lean proof of the class separation. Neither result says anything about P versus NP for ordinary Boolean circuits.",
+      "open": "Neither paper is peer reviewed. Anthropic says no human mathematician has checked its proof, and that only AI readers judged whether its Lean statement file says what is meant; an outside rebuild of the Lean code on November 24 passed every mechanical check but cannot settle that question either. One consequence in Anthropic's paper, on determinantal complexity, is not formalized. OpenAI's formal proof covers the exact separation, not its stronger approximate bound, and the company says later preprints posted on November 24 supersede this one.",
+      "src": [
+        {
+          "label": "Anthropic paper (formal-math repository)",
+          "url": "https://github.com/anthropics/formal-math/blob/vp-vnp/vp-vnp/paper.pdf"
+        },
+        {
+          "label": "OpenAI paper",
+          "url": "https://github.com/openai/math/blob/main/preprints/VP-and-VNP-are-different-November-23-2026/paper.pdf"
+        },
+        {
+          "label": "Independent Lean rebuild",
+          "url": "https://github.com/Horace-Maxwell/vp-vnp-lean-independent-verification"
+        },
+        {
+          "label": "Quanta Magazine",
+          "url": "https://www.quantamagazine.org/update/169054/"
+        }
+      ]
+    },
     {
       "id": "2026-11-20-minimax-cryptanalysis",
       "date": "2026-11-20",
