@@ -2,6 +2,93 @@
   "checked": "2026-11-26",
   "entries": [
     {
+      "id": "2026-11-25-cogentic-unconditional-factoring",
+      "date": "2026-11-25",
+      "logged": "2026-11-26",
+      "field": "Computer science",
+      "title": "Google's Gemini agents claim the first proven L[1/3] algorithm for factoring any whole number",
+      "who": "Google Research and Google DeepMind (Cogentic team)",
+      "system": "Cogentic, an agent framework running on Gemini 4",
+      "sum": "Google posted six papers on November 25 that it says its Cogentic agents wrote from a single prompt. The lead one claims a randomized algorithm that factors every integer in time L[1/3, 105] with no unproven assumptions, matching the exponent of the number field sieve, which only reaches L[1/3] heuristically; the best proven bound since 1992 had been L[1/2, 1]. Companion papers claim a deterministic factoring method in time L[3/4] and faster provable discrete logarithms in finite fields of small characteristic.",
+      "open": "Not peer reviewed and not independently checked. Google says Lean 4 proofs exist but has not released them. The constant 105 is far larger than the number field sieve's roughly 1.9, so this is a theory result that does nothing to speed up attacks on real encryption keys.",
+      "src": [
+        {
+          "label": "Factoring paper (Google Research GitHub)",
+          "url": "https://raw.githubusercontent.com/google-research/google-research/master/cogentic_research_papers/integer_factorization/paper.pdf"
+        },
+        {
+          "label": "Cogentic papers index",
+          "url": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers"
+        },
+        {
+          "label": "Deterministic factoring paper",
+          "url": "https://raw.githubusercontent.com/google-research/google-research/master/cogentic_research_papers/deterministic_factoring_l34/paper.pdf"
+        },
+        {
+          "label": "OfficeChai",
+          "url": "https://officechai.com/ai/googles-cogentic-ai-releases-six-math-papers-in-one-day-including-a-proven-fast-algorithm-for-factoring-numbers/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24-matrix-multiplication-exponent-9-4",
+      "date": "2026-11-24",
+      "logged": "2026-11-26",
+      "field": "Computer science",
+      "title": "OpenAI model claims the matrix multiplication exponent is exactly 9/4, ruling out the hoped-for 2",
+      "who": "OpenAI",
+      "system": "Unnamed internal OpenAI model",
+      "sum": "A paper posted on November 24 claims a matching lower bound for multiplying two n by n matrices: any formal arithmetic circuit needs at least half of n to the power 9/4 multiplications or divisions, over every field. Together with the 9/4 upper bound OpenAI's model claimed earlier, which others have since extended to every field, that would fix the exponent at exactly 9/4 and refute the long-held conjecture that it could be pushed down to 2. A companion paper with the same tensor-geometry method claims to prove the Erdős–Rado sunflower conjecture with a base depending only on the number of petals.",
+      "open": "Not peer reviewed, and OpenAI is the only source. The Lean formalization covers division-free circuits only, not the full statement with division, and OpenAI says results in its repository that lack full formal proofs could have issues. No outside expert has commented on the lower bound yet.",
+      "src": [
+        {
+          "label": "OpenAI paper",
+          "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf"
+        },
+        {
+          "label": "Paper summary and Lean scope",
+          "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/README.md"
+        },
+        {
+          "label": "Sunflower paper",
+          "url": "https://github.com/openai/math/blob/main/preprints/An-exponential-bound-for-sunflowers-November-24-2026/paper.pdf"
+        },
+        {
+          "label": "Tensor-geometry companion paper",
+          "url": "https://github.com/openai/math/blob/main/preprints/Euclidean-geometry-in-the-asymptotic-spectrum-of-tensors-November-24-2026/paper.pdf"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24-smale-ninth-problem-hirsch",
+      "date": "2026-11-24",
+      "logged": "2026-11-26",
+      "field": "Computer science",
+      "title": "OpenAI model claims an answer to Smale's ninth problem and disproves the polynomial Hirsch conjecture",
+      "who": "OpenAI",
+      "system": "Unnamed internal OpenAI model",
+      "sum": "In the same November 24 batch, one paper claims a deterministic algorithm that solves any linear program with real coefficients in a number of steps polynomial in just the numbers of variables and constraints, a question Steve Smale made the ninth on his list of problems. A second paper claims simple polytopes with n facets whose graphs have diameter growing faster than any power of n, disproving the polynomial Hirsch conjecture; Santos's earlier counterexample, a 43-dimensional polytope with 86 facets, broke only Hirsch's original bound of n minus d steps.",
+      "open": "Neither paper is peer reviewed and no independent expert has checked them; OpenAI is the only source. The Lean proof of the linear programming result covers rational inputs only, not arbitrary real coefficients. The Hirsch result has a Lean formalization of its main statements.",
+      "src": [
+        {
+          "label": "Linear programming paper",
+          "url": "https://github.com/openai/math/blob/main/preprints/Strongly-polynomial-linear-programming-November-24-2026/paper.pdf"
+        },
+        {
+          "label": "Linear programming summary and Lean scope",
+          "url": "https://github.com/openai/math/blob/main/preprints/Strongly-polynomial-linear-programming-November-24-2026/README.md"
+        },
+        {
+          "label": "Polytope diameter paper",
+          "url": "https://github.com/openai/math/blob/main/preprints/Superpolynomial-graph-diameter-of-simple-polytopes-November-24-2026/paper.pdf"
+        },
+        {
+          "label": "Snape Report",
+          "url": "https://snapereport.com/s/openai-preprints-claim-strongly-polynomial-lp-and-polynomial-hirsch-disproof"
+        }
+      ]
+    },
+    {
       "id": "2026-11-23-vp-vnp-separation",
       "date": "2026-11-23",
       "logged": "2026-11-26",
@@ -10,7 +97,7 @@
       "who": "Anthropic; OpenAI",
       "system": "Internal research Claude model; OpenAI models (unnamed)",
       "sum": "On November 23 both companies released papers claiming to settle Leslie Valiant's 1979 conjecture that the permanent of a matrix cannot be computed by polynomial-size arithmetic circuits, the algebraic counterpart of P versus NP, over every field. Anthropic's 70-page paper, credited to Claude, proves that such circuits need more than m to the power c·(log m)^(1/3) gates and comes with a Lean 4 formalization; OpenAI's 30-page paper gives a bound of the form exp(Ω((log n)^(5/4))) and links a Lean proof of the class separation. Neither result says anything about P versus NP for ordinary Boolean circuits.",
-      "open": "Neither paper is peer reviewed. Anthropic says no human mathematician has checked its proof, and that only AI readers judged whether its Lean statement file says what is meant; an outside rebuild of the Lean code on November 24 passed every mechanical check but cannot settle that question either. One consequence in Anthropic's paper, on determinantal complexity, is not formalized. OpenAI's formal proof covers the exact separation, not its stronger approximate bound, and the company says later preprints posted on November 24 supersede this one.",
+      "open": "Neither paper is peer reviewed. Anthropic says no human mathematician has checked its proof, and that only AI readers judged whether its Lean statement file says what is meant; an outside rebuild of the Lean code on November 24 passed every mechanical check but cannot settle that question either. One consequence in Anthropic's paper, on determinantal complexity, is not formalized. On November 24 OpenAI replaced its paper with two companion preprints: one claims circuits for the permanent need more than exp(c(log N)^2/(log log N)^2) gates outside characteristic two, the other an explicit grid polynomial that separates the whole chain of classes VF, VBP, VP and VNP, which its Lean code proves for exact circuits over every field. No outside mathematician has assessed either set of claims.",
       "src": [
         {
           "label": "Anthropic paper (formal-math repository)",
@@ -27,6 +114,14 @@
         {
           "label": "Quanta Magazine",
           "url": "https://www.quantamagazine.org/update/169054/"
+        },
+        {
+          "label": "OpenAI's November 24 companion papers",
+          "url": "https://github.com/openai/math/blob/main/preprints/Paths-trees-and-grids-separate-Valiants-hierarchy-November-24-2026/README.md"
+        },
+        {
+          "label": "OpenAI permanent lower bound",
+          "url": "https://github.com/openai/math/blob/main/preprints/Circuit-lower-bounds-for-Hamiltonian-cycle-and-the-permanent-November-24-2026/paper.pdf"
         }
       ]
     },
