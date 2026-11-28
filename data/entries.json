@@ -2,6 +2,27 @@
   "checked": "2026-11-27",
   "entries": [
     {
+      "id": "2026-11-23-deterministic-linear-time-mst",
+      "date": "2026-11-23",
+      "logged": "2026-11-27",
+      "field": "Computer science",
+      "title": "Computer scientists say OpenAI’s Astra found a deterministic linear-time algorithm for minimum spanning trees",
+      "who": "Sanjeev Khanna and Junkai Song (New York University) and Aaron Putterman (Harvard University)",
+      "system": "OpenAI’s Astra 6.2, run as teams of agents",
+      "sum": "A 30-page preprint posted on November 23 claims a deterministic algorithm that finds a minimum spanning tree of any graph with m edges in time proportional to m, using only pairwise comparisons of edge weights. The best deterministic bound since Bernard Chazelle’s 2000 paper was m times the inverse Ackermann function, a factor that grows extremely slowly; linear time was already known for randomized algorithms and for integer weights. The authors write that the main ideas came entirely from Astra 6.2, which first beat Chazelle’s bound after 15 hours with 15 agents and then improved it step by step until it reached linear time, while they checked, simplified and wrote up the result.",
+      "open": "Not peer reviewed, and the authors’ own check is the only one so far; no outside expert has published an assessment. The paper does not mention a formal, machine-checked proof, and its bound is stated in the comparison model rather than as measured running times.",
+      "src": [
+        {
+          "label": "arXiv preprint",
+          "url": "https://arxiv.org/abs/2611.31187"
+        },
+        {
+          "label": "Paper (PDF, with AI acknowledgments)",
+          "url": "https://arxiv.org/pdf/2611.31187"
+        }
+      ]
+    },
+    {
       "id": "2026-11-25-log-rank-square-root-barrier",
       "date": "2026-11-25",
       "logged": "2026-11-27",
