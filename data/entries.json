@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-27",
+  "checked": "2026-11-28",
   "entries": [
     {
       "id": "2026-11-23-deterministic-linear-time-mst",
@@ -366,7 +366,7 @@
       "who": "Levent Alpöge",
       "system": "Claude",
       "sum": "In a four-page note posted on November 20, Levent Alpöge says that, working with Claude, he found a proof of the Riemann hypothesis, the 1859 conjecture about how prime numbers are spread out, and that the method also settles the Generalized Riemann Hypothesis. He has released only a Lean formalization, split into 14 archive files; a footnote saying an AI-written English version ran past 250,000 pages was, he later said, a joke. He credits Claude with key steps near the end, including the idea of chaining theta lifts about the square root of X times.",
-      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, and several people have rebuilt it independently. On November 21 Michael Rubinstein of the University of Waterloo reported that all 175,187 modules compile and pass Lean's kernel and rest only on Lean's three standard axioms. On November 25 Luke Sernau posted two much shorter Lean editions of the same five theorems, about 300,000 and 76,000 lines; MIT's Andrew Sutherland reports that both build cleanly, use only the standard axioms and pass several independent checkers, though the strictest comparison of the longer edition had not finished. Readable mathematics is still thin: Rubinstein's AI-assisted guide breaks the zeta case into thirteen hypotheses it does not prove, and no mathematician has reviewed the argument itself. On November 24 Anurag Sahay, Will Sawin and Lior Silberman opened a public Polymath project, hosted on Terence Tao’s blog, to pull together the checking effort and extract a human-readable proof. There is no paper from Alpöge and no peer review. Alpöge has said the 250,000-page figure was a joke and conceded his Lean code contains much unneeded material. The Clay Mathematics Institute lists the problem as active but not solved, since its rules require publication and two years of scrutiny, and Kevin Buzzard says nobody yet understands what the proof shows. A separate, all-human draft proof by Alessandro Masullo, posted by Ravi Vakil the same day, has drawn objections and is not accepted.",
+      "open": "The Lean check is now strong: the Lean and Mathlib communities issued a joint statement saying they are fully confident the proof is correct, and several people have rebuilt it independently. On November 21 Michael Rubinstein of the University of Waterloo reported that all 175,187 modules compile and pass Lean's kernel and rest only on Lean's three standard axioms. On November 25 Luke Sernau posted two much shorter Lean editions of the same five theorems, about 300,000 and 76,000 lines; MIT's Andrew Sutherland reports that both build cleanly, use only the standard axioms and pass several independent checkers, and on November 26 the longer edition also passed his strictest comparison check, though a second run of that check on another machine ran out of memory before giving a verdict. The Lean community’s clean-up project has since rebuilt its main version on the longer edition. Readable mathematics is still thin: Rubinstein's AI-assisted guide breaks the zeta case into thirteen hypotheses it does not prove, and no mathematician has reviewed the argument itself. On November 24 Anurag Sahay, Will Sawin and Lior Silberman opened a public Polymath project, hosted on Terence Tao’s blog, to pull together the checking effort and extract a human-readable proof. There is no paper from Alpöge and no peer review. Alpöge has said the 250,000-page figure was a joke and conceded his Lean code contains much unneeded material. The Clay Mathematics Institute lists the problem as active but not solved, since its rules require publication and two years of scrutiny, and Kevin Buzzard says nobody yet understands what the proof shows. A separate, all-human draft proof by Alessandro Masullo, posted by Ravi Vakil the same day, has drawn objections and is not accepted.",
       "src": [
         {
           "label": "Alpöge's note (PDF)",
@@ -411,6 +411,10 @@
         {
           "label": "Terence Tao’s blog: G.R.H. Polymath",
           "url": "https://terrytao.wordpress.com/2026/11/24/g-r-h-polymath/"
+        },
+        {
+          "label": "Lean community clean-up project (GitHub)",
+          "url": "https://github.com/leanprover-community/riemann-hypothesis"
         }
       ],
       "image": {
